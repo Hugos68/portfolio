@@ -1,12 +1,14 @@
 /*place global styles here */
-html, body { @apply h-full overflow-hidden; }
+html, body { 
+    @apply h-full overflow-hidden; 
+}
 
 :root {
     --header-height: 5rem;
 }
 
-* {
-    @apply transition-colors;
+body:not(body > *), header > *, footer > * {
+    @apply transition-none transition-colors !duration-150;
 }
 
 .page {
