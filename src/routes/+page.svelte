@@ -7,7 +7,7 @@
         "Backend Developer",
         "Nerd",
         "Tech Enthusiast",
-        "Student"
+        "IT Student"
     ]
     const randomRole: string = roles[Math.floor(Math.random()*roles.length)];
 </script>
