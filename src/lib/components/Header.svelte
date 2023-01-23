@@ -1,8 +1,23 @@
 <script lang="ts">
 	import { AppBar, LightSwitch } from "@skeletonlabs/skeleton";
+	import { onDestroy, onMount } from "svelte";
+
+    let main: HTMLElement | null;
+    let yScroll: number = 0;
+    function scrollHandler(e: any): void {
+        yScroll = e.target.scrollTop;
+    }
+    onMount(() => {
+        main = document.getElementById('page');
+        if (main) main.addEventListener('scroll', scrollHandler);
+    });
+
+    onDestroy(() => {
+        if (main) main.removeEventListener('scroll', scrollHandler);
+    });
 </script>
 
-<AppBar background="bg-secondary-500-400-token">
+<AppBar background="transition-colors {yScroll===0 ? "bg-surface-50-900-token shadow-none" : "bg-surface-100-800-token"}"}>
 	<svelte:fragment slot="lead">
         <a href="/" class="font-semibold text-xl">Hugo Korte</a>
     </svelte:fragment>
