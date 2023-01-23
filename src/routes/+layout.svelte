@@ -3,7 +3,7 @@
 	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../app.postcss';
 
-	import { AppShell } from '@skeletonlabs/skeleton';
+	import { AppShell, LightSwitch } from '@skeletonlabs/skeleton';
 	import SlotWrapper from '$lib/components/SlotWrapper.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -14,3 +14,7 @@
 	<SlotWrapper><slot /></SlotWrapper>
 	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
 </AppShell>
+
+<div class="hidden">
+	<LightSwitch/>
+</div>
