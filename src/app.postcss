@@ -7,10 +7,6 @@ html, body {
     --header-height: 5rem;
 }
 
-body:not(body > *), header > *, footer > * {
-    @apply transition-none transition-colors !duration-150;
-}
-
 .page {
     @apply px-8 mb-12 container mx-auto min-h-[calc(100vh-var(--header-height))];
 }
