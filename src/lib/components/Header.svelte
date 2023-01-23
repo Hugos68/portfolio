@@ -29,7 +29,12 @@
                 <li><a href="/skills" class:bg-opacity-10={$page.route.id==="/skills"} class:bg-primary-500={$page.route.id==="/skills"}>Skills</a></li>
                 <li><a href="/projects" class:bg-opacity-10={$page.route.id==="/projects"} class:bg-primary-500={$page.route.id==="/projects"}>Projects</a></li>
                 <div class="h-6 w-0.5 bg-surface-600-300-token mx-2"></div>
-                <li class="px-4"><LightSwitch /></li>
+                <li class="px-4">
+                    <!-- TODO: create custom logic here -->
+                    <button class="p-0 h-min w-min cursor-default" on:click={() => console.log("test")}>
+                        <LightSwitch/>
+                    </button>
+                </li>
             </ul>
         </nav>
     </svelte:fragment>  
