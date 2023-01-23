@@ -1,2 +1,10 @@
 /*place global styles here */
 html, body { @apply h-full overflow-hidden; }
+
+:root {
+    --header-height: 5rem;
+}
+
+.page {
+    @apply container mx-auto min-h-[calc(100vh-var(--header-height))]
+}
