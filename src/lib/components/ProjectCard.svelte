@@ -8,7 +8,7 @@
 </script>
 
 <div class="card w-full h-full aspect-video card-glass-primary text-white">
-    <div class="relative translate-x-4 translate-y-4 hover:translate-y-[-2rem] transition-transform duration-500 aspect-video group shadow-xl">
+    <div class="relative translate-x-4 translate-y-4 hover:translate-y-[-1rem] transition-transform duration-500 aspect-video group shadow-xl">
         <img class="card absolute group-hover:brightness-[25%] transition-all duration-500 z-[-1]" src="{bgImageSrc}" alt="{bgImageAlt}">
         <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col h-full items-center justify-evenly">
             <div class="flex flex-col">
