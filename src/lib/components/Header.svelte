@@ -17,7 +17,7 @@
     });
 </script>
 
-<AppBar shadow="{yScroll===0 ? "shadow-none" : "shadow-lg"}" background="transition-colors {yScroll===0 ? "bg-surface-50-900-token" : "bg-surface-100-800-token"}"}>
+<AppBar shadow="{yScroll===0 ? "shadow-none" : "shadow-lg"}" background="{yScroll===0 ? "bg-surface-50-900-token" : "bg-surface-100-800-token"}"}>
 	<svelte:fragment slot="lead">
         <a href="/" class="font-semibold text-xl">Hugo Korte</a>
     </svelte:fragment>

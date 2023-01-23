@@ -5,8 +5,10 @@
     onMount(() => mounted = true);
 </script>
 
-{#if mounted}
-    <div class="page">
+
+<div class="page">
+    {#if mounted}
         <slot />
-    </div>
-{/if}
+    {/if}
+</div>
+

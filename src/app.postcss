@@ -5,6 +5,10 @@ html, body { @apply h-full overflow-hidden; }
     --header-height: 5rem;
 }
 
+* {
+    @apply transition-colors;
+}
+
 .page {
-    @apply container mx-auto min-h-[calc(100vh-var(--header-height))]
+    @apply container mx-auto min-h-[calc(100vh-var(--header-height))];
 }
