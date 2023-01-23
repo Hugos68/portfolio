@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { fly } from "svelte/transition";
 
-
     const roles: string[] = [
         "Frontend Developer",
+        "Gamer",
         "Backend Developer",
-        "Tech Enthusiast"
+        "Nerd",
+        "Tech Enthusiast",
+        "Student"
     ]
     const randomRole: string = roles[Math.floor(Math.random()*roles.length)];
 </script>
