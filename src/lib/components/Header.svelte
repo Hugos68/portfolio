@@ -25,9 +25,9 @@
 	<svelte:fragment slot="trail">
         <nav>
             <ul class="list-nav flex gap-2 items-center">
-                <li><a href="/about" class:underline={$page.route.id==="/about"}>About Me</a></li>
-                <li><a href="/skills" class:underline={$page.route.id==="/skills"}>Skills</a></li>
-                <li><a href="/projects" class:underline={$page.route.id==="/projects"}>Projects</a></li>
+                <li><a href="/about" class:bg-opacity-10={$page.route.id==="/about"} class:bg-primary-500={$page.route.id==="/about"}>About Me</a></li>
+                <li><a href="/skills" class:bg-opacity-10={$page.route.id==="/skills"} class:bg-primary-500={$page.route.id==="/skills"}>Skills</a></li>
+                <li><a href="/projects" class:bg-opacity-10={$page.route.id==="/projects"} class:bg-primary-500={$page.route.id==="/projects"}>Projects</a></li>
                 <div class="h-6 w-0.5 bg-surface-600-300-token mx-2"></div>
                 <li class="px-4"><LightSwitch /></li>
             </ul>
