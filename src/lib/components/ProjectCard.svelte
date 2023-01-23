@@ -9,8 +9,8 @@
 
 <div class="card w-full h-full aspect-video card-glass-primary text-white">
     <div class="relative translate-x-4 translate-y-4 aspect-video group shadow-xl">
-        <img class="card absolute group-hover:brightness-[25%] transition-all z-[-1]" src="{bgImageSrc}" alt="{bgImageAlt}">
-        <div class="opacity-0 group-hover:opacity-100 transition-all flex flex-col h-full items-center justify-evenly">
+        <img class="card absolute group-hover:brightness-[25%] transition-all duration-500 z-[-1]" src="{bgImageSrc}" alt="{bgImageAlt}">
+        <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col h-full items-center justify-evenly">
             <div class="flex flex-col">
                 <p class="unstyled font-bold text-[2.5rem] text-center">{title}</p>
                 <p class="unstyled max-w-[50ch] text-[0.825rem] text-center">{description}</p>
