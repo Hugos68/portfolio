@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from "$app/stores";
 	import { AppBar, LightSwitch } from "@skeletonlabs/skeleton";
 	import { onDestroy, onMount } from "svelte";
 
@@ -21,11 +22,10 @@
 	<svelte:fragment slot="lead">
         <a href="/" class="font-semibold text-xl">Hugo Korte</a>
     </svelte:fragment>
-
 	<svelte:fragment slot="trail">
         <nav>
             <ul class="list-nav flex gap-2 items-center">
-                <li><a href="/about">About Me</a></li>
+                <li><a href="/about" class:underline={$page.route.id==="/about"}>About Me</a></li>
                 <li><a href="/skills">Skills</a></li>
                 <li><a href="/projects">Projects</a></li>
                 <div class="h-6 w-0.5 bg-surface-600-300-token mx-2"></div>
