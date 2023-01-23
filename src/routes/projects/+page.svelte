@@ -28,7 +28,7 @@
         },
     ];
 </script>
-<div class="flex flex-wrap justify-between mt-10 gap-10">
+<div class="flex flex-wrap justify-between mt-10 gap-12">
     {#each projects as project, i}
         <div class="flex-1" in:fly={{delay: 50 * i, y: 50}}>
             <ProjectCard 

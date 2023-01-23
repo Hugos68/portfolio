@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores";
-	import { AppBar, LightSwitch, storeLightSwitch } from "@skeletonlabs/skeleton";
+	import { AppBar,storeLightSwitch} from "@skeletonlabs/skeleton";
 	import { onDestroy, onMount } from "svelte";
 
     let main: HTMLElement | null;
@@ -16,6 +16,10 @@
     onDestroy(() => {
         if (main) main.removeEventListener('scroll', scrollHandler);
     });
+
+    const setTheme = (state: boolean) => {
+        if ($storeLightSwitch!==state) toggleTheme();
+    }
 
 	const toggleTheme = () => {
 		storeLightSwitch.update(state => {return !state});
