@@ -24,7 +24,7 @@
 <h1 class="unstyled text-center text-[clamp(2.75rem,12.5vw,10rem)] leading-tight" in:fly={{delay: 1500, duration: 1000, x: -100}}>Full-Stack Developer.</h1>
 <div class="w-min mx-auto flex gap-12 mt-[7.5vh]" in:fly={{delay: 2000, duration: 1000, y: 100}}>
     <button class="btn btn-lg variant-filled" on:click={() => openContactModal()}>Hire Me</button>
-    <button class="btn btn-lg variant-filled">Resume</button>
+    <a href="Hugo_Korte_Resume_2023-25-1.pdf" download="Hugo_Korte_Resume_2023-25-1" class="btn btn-lg variant-filled">Resume</a>
 </div>
 
 
