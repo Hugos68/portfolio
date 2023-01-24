@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { modalStore, toastStore, type ToastSettings } from "@skeletonlabs/skeleton";
 
-    export let email: string;
-    export let message: string;
+    let firstName: string, lastName: string, email: string, message: string;
     
     const submitContactMeForm = () => {
         // TODO: Save info in database or whatever
@@ -21,9 +20,19 @@
 </script>
 
 <form on:submit|preventDefault={submitContactMeForm} class="flex flex-col gap-4">
+    <div class="flex justify-between">
+        <label for="first-name">
+            <span>First Name:</span>
+            <input id="first-name" type="text" placeholder="First Name" required bind:value={firstName}>
+        </label>
+        <label for="last-name">
+            <span>Last Name:</span>
+            <input id="last-name" type="text" placeholder="Last Name" required bind:value={lastName}>
+        </label>
+    </div>
     <label for="email">
         <span>Email:</span>
-        <input id="email" type="email" placeholder="Email that I can contact you through..." required bind:value={email}>
+        <input id="email" type="email" placeholder="Email that I can contact you back through" required bind:value={email}>
     </label>
     <label for="message">
         <span>Short Message:</span>

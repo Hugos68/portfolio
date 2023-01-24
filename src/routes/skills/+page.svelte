@@ -7,7 +7,7 @@
 </script>
 
 
-<AccordionGroup>
+<AccordionGroup padding="p-8">
     <div class="flex flex-col gap-12">
         <div in:fly={{delay: 250, duration: 1000, y: 250, easing: cubicOut}}>
             <AccordionItem>

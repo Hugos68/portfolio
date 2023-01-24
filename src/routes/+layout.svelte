@@ -9,7 +9,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<Modal />
+<Modal padding="p-8"/>
 <Toast />
 
 <AppShell>
