@@ -7,8 +7,7 @@
 </script>
 
 
-<AccordionGroup padding="p-8">
-    <div class="flex flex-col gap-12">
+<AccordionGroup spacing='space-y-12' padding="p-8">
         <div in:fly={{delay: 250, duration: 1000, y: 250, easing: cubicOut}}>
             <AccordionItem>
                 <svelte:fragment slot="lead">🖥️ <strong>Frontend</strong></svelte:fragment>
@@ -17,19 +16,18 @@
             </AccordionItem>
         </div>
         <div in:fly={{delay: 500, duration: 1000, y: 250, easing: cubicOut}}>
-        <AccordionItem>
-            <svelte:fragment slot="lead">⚙️ <strong>Backend</strong></svelte:fragment>
-            <svelte:fragment slot="summary">Business logic and Databases.</svelte:fragment>
-            <svelte:fragment slot="content">(content)</svelte:fragment>
-        </AccordionItem>
+            <AccordionItem>
+                <svelte:fragment slot="lead">⚙️ <strong>Backend</strong></svelte:fragment>
+                <svelte:fragment slot="summary">Business logic and Databases.</svelte:fragment>
+                <svelte:fragment slot="content">(content)</svelte:fragment>
+            </AccordionItem>
         </div>
         <div in:fly={{delay: 750, duration: 1000, y: 250, easing: cubicOut}}>
-        <AccordionItem>
-            <svelte:fragment slot="lead">🔧 <strong>Tooling</strong></svelte:fragment>
-            <svelte:fragment slot="summary">Tools I'm comfortable and familiar with.</svelte:fragment>
-            <svelte:fragment slot="content">(content)</svelte:fragment>
-        </AccordionItem>
+            <AccordionItem>
+                <svelte:fragment slot="lead">🔧 <strong>Tooling</strong></svelte:fragment>
+                <svelte:fragment slot="summary">Tools I'm comfortable and familiar with.</svelte:fragment>
+                <svelte:fragment slot="content">(content)</svelte:fragment>
+            </AccordionItem>
         </div>
-    </div>
 </AccordionGroup>
 
