@@ -19,12 +19,12 @@
 
 
 <p class="mt-[5vh] text-center" in:fly={{duration: 1000, y: -100}}>Hi my name is</p>
-<h1 class="text-center  text-[clamp(2.75rem,15vw,10rem)] leading-tight" in:fly={{delay: 500, duration: 1000, x: 100}}>Hugo Korte</h1>
+<h1 class="unstyled text-center text-[clamp(2.75rem,12.5vw,10rem)] leading-tight" in:fly={{delay: 500, duration: 1000, x: 100}}>Hugo Korte</h1>
 <p class="text-center"  in:fly={{delay: 1000, duration: 1000, y: 100}}>I am a</p>
-<h1 class="text-center text-[clamp(2.75rem,15vw,10rem)] leading-tight" in:fly={{delay: 1500, duration: 1000, x: -100}}>Full-Stack Developer.</h1>
+<h1 class="unstyled text-center text-[clamp(2.75rem,12.5vw,10rem)] leading-tight" in:fly={{delay: 1500, duration: 1000, x: -100}}>Full-Stack Developer.</h1>
 <div class="w-min mx-auto flex gap-12 mt-[7.5vh]" in:fly={{delay: 2000, duration: 1000, y: 100}}>
-    <button class="btn btn-lg btn-filled" on:click={() => openContactModal()}>Hire Me</button>
-    <button class="btn btn-lg btn-filled">Resume</button>
+    <button class="btn btn-lg variant-filled" on:click={() => openContactModal()}>Hire Me</button>
+    <button class="btn btn-lg variant-filled">Resume</button>
 </div>
 
 
