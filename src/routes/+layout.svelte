@@ -3,11 +3,14 @@
 	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../app.postcss';
 
-	import { AppShell, LightSwitch } from '@skeletonlabs/skeleton';
+	import { AppShell, LightSwitch, Modal, Toast } from '@skeletonlabs/skeleton';
 	import SlotWrapper from '$lib/components/SlotWrapper.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
+
+<Modal />
+<Toast />
 
 <AppShell>
 	<svelte:fragment slot="header"><Header /></svelte:fragment>
