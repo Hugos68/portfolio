@@ -5,6 +5,7 @@
     export let message: string;
     
     const submitContactMeForm = () => {
+        // TODO: Save info in database or whatever
         modalStore.close();
         const toastSettings: ToastSettings = {
             message: 'Success! Looking forward to work with you!',
