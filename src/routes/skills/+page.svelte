@@ -25,7 +25,7 @@
         <div in:fly={{delay: 750, duration: 1000, y: 250, easing: cubicOut}}>
             <AccordionItem>
                 <svelte:fragment slot="lead">🔧 <strong>Tooling</strong></svelte:fragment>
-                <svelte:fragment slot="summary">Tools I'm comfortable and familiar with.</svelte:fragment>
+                <svelte:fragment slot="summary">Tools/Concepts I am comfortable and familiar with.</svelte:fragment>
                 <svelte:fragment slot="content">(content)</svelte:fragment>
             </AccordionItem>
         </div>
