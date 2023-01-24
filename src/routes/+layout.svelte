@@ -9,15 +9,18 @@
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
+<!-- OVERLAYS -->
 <Modal padding="p-8"/>
 <Toast />
 
+<!-- MAIN STRUCTURE -->
 <AppShell>
 	<svelte:fragment slot="header"><Header /></svelte:fragment>
 	<SlotWrapper><slot /></SlotWrapper>
 	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
 </AppShell>
 
+<!-- Hidden LightSwitch in order to get system preference mode without -->
 <div class="hidden">
 	<LightSwitch/>
 </div>
