@@ -7,7 +7,16 @@ html, body {
     --header-height: 5.125rem;
 }
 
-* {
+body:not(body > *), 
+footer > *, 
+header > *, 
+h1, 
+h2, 
+h3, 
+a, 
+p, 
+span, 
+label {
     @apply text-token transition-colors;
 }
 
