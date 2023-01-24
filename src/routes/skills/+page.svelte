@@ -1,0 +1,35 @@
+<script>
+
+	import { AccordionGroup, AccordionItem } from "@skeletonlabs/skeleton";
+	import { fly } from "svelte/transition";
+    import { cubicOut } from "svelte/easing"
+
+</script>
+
+
+<AccordionGroup>
+    <div class="flex flex-col gap-12">
+        <div in:fly={{delay: 250, duration: 1000, y: 250, easing: cubicOut}}>
+            <AccordionItem>
+                <svelte:fragment slot="lead">🖥️ <strong>Frontend</strong></svelte:fragment>
+                <svelte:fragment slot="summary">Web development and interacting with the end user.</svelte:fragment>
+                <svelte:fragment slot="content">(content)</svelte:fragment>
+            </AccordionItem>
+        </div>
+        <div in:fly={{delay: 500, duration: 1000, y: 250, easing: cubicOut}}>
+        <AccordionItem>
+            <svelte:fragment slot="lead">⚙️ <strong>Backend</strong></svelte:fragment>
+            <svelte:fragment slot="summary">Business logic and Databases.</svelte:fragment>
+            <svelte:fragment slot="content">(content)</svelte:fragment>
+        </AccordionItem>
+        </div>
+        <div in:fly={{delay: 750, duration: 1000, y: 250, easing: cubicOut}}>
+        <AccordionItem>
+            <svelte:fragment slot="lead">🔧 <strong>Tooling</strong></svelte:fragment>
+            <svelte:fragment slot="summary">Tools I'm comfortable and familiar with.</svelte:fragment>
+            <svelte:fragment slot="content">(content)</svelte:fragment>
+        </AccordionItem>
+        </div>
+    </div>
+</AccordionGroup>
+
