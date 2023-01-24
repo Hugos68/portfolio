@@ -3,15 +3,17 @@
 	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../app.postcss';
 
-	import { AppShell, LightSwitch, Modal, Toast } from '@skeletonlabs/skeleton';
+	import { AppShell, Drawer, LightSwitch, Modal, Toast } from '@skeletonlabs/skeleton';
 	import SlotWrapper from '$lib/components/SlotWrapper.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <!-- OVERLAYS -->
-<Modal padding="p-8"/>
 <Toast />
+<Drawer />
+<Modal padding="p-8"/>
+
 
 <!-- MAIN STRUCTURE -->
 <AppShell>
