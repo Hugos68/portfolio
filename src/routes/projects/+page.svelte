@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ProjectCard from "$lib/components/ProjectCard.svelte";
 	import { fly } from "svelte/transition";
+    import { cubicOut } from "svelte/easing";
     const projects = [   
         {
             title: "Subjective",
@@ -30,7 +31,7 @@
 </script>
 <div class="flex flex-wrap justify-between mt-10 gap-12">
     {#each projects as project, i}
-        <div class="flex-1" in:fly={{delay: 50 * i, y: 50, duration: 750 - i * 50}}>
+        <div class="flex-1" in:fly={{delay: 75 * i, y: 50, duration: 750, easing: cubicOut}}>
             <ProjectCard 
                 title={project.title}
                 description={project.description}
