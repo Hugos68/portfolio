@@ -36,9 +36,9 @@
     }
 </script>
 
-<AppBar shadow="{yScroll<=0 ? "shadow-none" : "shadow-lg"}" background="{yScroll<=0 ? "bg-none" : "bg-surface-100-800-token"}">
+<AppBar padding="px-[5vw] py-4" shadow="{yScroll<=0 ? "shadow-none" : "shadow-lg"}" background="{yScroll<=0 ? "bg-none" : "bg-surface-100-800-token"}">
 	<svelte:fragment slot="lead">
-        <a href="/" class="font-semibold text-xl">Hugo Korte</a>
+        <a href="/" class="font-semibold text-xl px-4">Hugo Korte</a>
     </svelte:fragment>
 	<svelte:fragment slot="trail">
         <nav>

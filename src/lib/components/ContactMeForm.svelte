@@ -21,27 +21,27 @@
 
 <form on:submit|preventDefault={submitContactMeForm} class="flex flex-col gap-4">
     <div class="flex justify-between">
-        <label for="first-name">
+        <label class="input-label" for="first-name">
             <span>First Name:</span>
             <input id="first-name" type="text" placeholder="First Name" required bind:value={firstName}>
         </label>
-        <label for="last-name">
+        <label class="input-label" for="last-name">
             <span>Last Name:</span>
             <input id="last-name" type="text" placeholder="Last Name" required bind:value={lastName}>
         </label>
     </div>
-    <label for="email">
+    <label class="input-label" for="email">
         <span>Email:</span>
         <input id="email" type="email" placeholder="Email that I can contact you back through" required bind:value={email}>
     </label>
-    <label for="message">
+    <label class="input-label" for="message">
         <span>Short Message:</span>
-        <textarea id="message" contenteditable required placeholder="Tell me who you are and what you are looking for..." bind:textContent={message}></textarea>
+        <textarea class="!rounded-[var(--theme-rounded-base)] min-h-[7.5rem] resize-none" id="message" contenteditable required placeholder="Tell me who you are and what you are looking for..." bind:textContent={message}></textarea>
     </label>
     <p class="text-sm text-center opacity-75">Note: A response could take me upto 24-48 hours</p>
     <div class="flex justify-evenly mt-4">
-        <button class="btn btn-ghost" on:click={closeContactMeForm}>Cancel</button>
-        <button class="btn btn-filled-primary" type="submit">Submit</button>
+        <button class="btn variant-ghost" on:click={closeContactMeForm} type="button">Cancel</button>
+        <button class="btn variant-filled-primary" type="submit">Submit</button>
     </div>
 </form>
 

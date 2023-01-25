@@ -12,7 +12,7 @@
     {#if mounted}
         {#if $page.route.id!=="/"}
             <h1 class="text-center capitalize" in:fade>{$page.route.id?.substring(1)}</h1>
-            <div class="w-full h-0.5 my-8 bg-surface-100-800-token" in:fade></div>
+            <span class="w-full block h-0.5 my-8 bg-surface-100-800-token" in:fade></span>
         {/if}
         <slot />
     {/if}
