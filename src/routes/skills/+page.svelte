@@ -1,9 +1,7 @@
-<script>
-
+<script lang="ts">
 	import { AccordionGroup, AccordionItem } from "@skeletonlabs/skeleton";
 	import { fly } from "svelte/transition";
     import { cubicOut } from "svelte/easing"
-
 </script>
 
 

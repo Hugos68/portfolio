@@ -22,7 +22,7 @@
 	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
 </AppShell>
 
-<!-- Hidden LightSwitch in order to get system preference mode without -->
+<!-- Hidden LightSwitch in order to get system preference mode without having to implement logic myself (lazy, ik) -->
 <div class="hidden">
 	<LightSwitch/>
 </div>
