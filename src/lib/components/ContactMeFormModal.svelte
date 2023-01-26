@@ -19,7 +19,7 @@
                 toastStore.trigger(toastSettings);
             }
             else {
-                
+
             }
         }
         // TODO: Save info in database or whatever
@@ -30,7 +30,8 @@
     }
 </script>
 
-<form action="/?/submitContactMeForm" method="post" class="flex flex-col gap-4" use:enhance={submitContactMeForm}>
+<form action="/?/submitContactMeForm" method="post" class="flex flex-col gap-4 p-8" use:enhance={submitContactMeForm}>
+    <h2>Contact Me</h2>
     <div class="flex justify-between">
         <label class="input-label" for="first-name">
             <span>First Name:</span>

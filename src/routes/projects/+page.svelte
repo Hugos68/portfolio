@@ -13,7 +13,7 @@
         },
         {
             title: "Blugo",
-            description: "Blugo is an online blog used to blog your daily activites, I've built it to practise user mangament and authentication.",
+            description: "Blugo is an online blog used to blog your daily activites, I've built it to practise user management and authentication.",
             codeLink : "https://github.com/Hugos68/blugo",
             demoLink : "https://blugo.vercel.app/home",
             bgImageSrc : "blugo.png",
