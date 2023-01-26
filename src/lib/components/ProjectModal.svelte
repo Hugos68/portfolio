@@ -12,19 +12,22 @@
 
 {#if $modalStore[0]}
     <div class="card overflow-hidden">
-        <!-- Header -->
         <header>
             <img src="{$modalStore[0].meta?.bgImageSrc}" class="bg-black/50 w-full aspect-video" alt="{$modalStore[0].meta?.bgImageAlt}" />
         </header>
-        <!-- Body -->
         <div class="p-4 space-y-4">
+            <div class="flex gap-2">
+                {#each $modalStore[0].meta?.techs as tech} 
+                <span class="chip variant-ghost-primary">{tech}</span>
+            {/each}
+            </div>
+    
             <h3><strong>{$modalStore[0].meta?.title}</strong></h3>
             <article>
                 <p>{$modalStore[0].meta?.description}</p>
             </article>
         </div>
         <hr />
-        <!-- Footer -->
         <footer class="p-4 flex justify-start items-center space-x-4">
             <div class="flex-auto flex justify-between items-center">
                 <a class="btn btn-sm lg:btn-lg variant-ghost-secondary p-3" href="{$modalStore[0].meta?.codeLink}" on:click|preventDefault={() => openLinkInNewTab($modalStore[0].meta?.codeLink)} >

@@ -9,6 +9,7 @@
     export let demoLink: string;
     export let bgImageSrc: string;
     export let bgImageAlt: string;
+    export let techs: string[];
     
     const openProjectModal = (): void => {
         const modalComponent: ModalComponent = {
@@ -23,7 +24,8 @@
                 codeLink: codeLink,
                 demoLink: demoLink,
                 bgImageSrc: bgImageSrc,
-                bgImageAlt: bgImageAlt
+                bgImageAlt: bgImageAlt,
+                techs: techs
             },
         };
         modalStore.trigger(modalSettings);
