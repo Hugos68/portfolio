@@ -9,7 +9,6 @@
     }
 </script>
 
-<div class="footer w-full bg-surface-100-800-token py-16 px-8 flex flex-wrap gap-8 justify-between items-start">
     <div>
         <p><strong>Contact me:</strong></p>
         <div class="flex gap-4">
@@ -41,4 +40,3 @@
             <span>Skeleton</span>
         </a>
     </div>
-</div>

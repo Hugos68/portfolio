@@ -17,7 +17,7 @@
 
 
 <!-- MAIN STRUCTURE -->
-<AppShell>
+<AppShell slotPageFooter="footer w-full bg-surface-100-800-token py-16 px-8 flex flex-wrap gap-8 justify-between items-start">
 	<svelte:fragment slot="header"><Header /></svelte:fragment>
 	<SlotWrapper><slot /></SlotWrapper>
 	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>

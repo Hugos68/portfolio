@@ -38,6 +38,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sendgrid/mail": "^7.7.0",
+		"devicon": "^2.15.1",
 		"svelte-pdf": "^1.0.16"
 	}
 }

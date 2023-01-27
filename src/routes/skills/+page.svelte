@@ -10,7 +10,12 @@
             <AccordionItem>
                 <svelte:fragment slot="summary">🖥️ <strong>Frontend</strong></svelte:fragment>
                 <svelte:fragment slot="content">
-                    HTML, CSS, JavaScript, TypeScript, Svelte, Tailwind
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-tailwindcss-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                    <i class="devicon-typescript-plain colored"></i>
+                    <i class="devicon-svelte-plain colored"></i>    
                 </svelte:fragment>
             </AccordionItem>
         </div>
@@ -18,7 +23,11 @@
             <AccordionItem>
                 <svelte:fragment slot="summary">⚙️ <strong>Backend</strong></svelte:fragment>
                 <svelte:fragment slot="content">
-                    Java, C#, PostgresSQL, MySQL, Node, AL, Business Central
+                    <i class="devicon-java-plain colored"></i>
+                    <i class="devicon-csharp-plain colored"></i>
+                    <i class="devicon-postgresql-plain colored"></i>
+                    <i class="devicon-microsoftsqlserver-plain"></i>
+                    <i class="devicon-node-plain colored"></i>
                 </svelte:fragment>
             </AccordionItem>
         </div>
@@ -26,7 +35,11 @@
             <AccordionItem>
                 <svelte:fragment slot="summary">🔧 <strong>Tooling</strong></svelte:fragment>
                 <svelte:fragment slot="content">
-                    RestAPI, Git, Docker, Figma, Photoshop
+                    <i class="devicon-rest-plain colored"></i>
+                    <i class="devicon-git-plain colored"></i>
+                    <i class="devicon-docker-plain colored"></i>
+                    <i class="devicon-figma-plain colored"></i>
+                    <i class="devicon-photoshop-plain colored"></i>
                 </svelte:fragment>
             </AccordionItem>
         </div>
