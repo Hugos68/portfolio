@@ -10,12 +10,14 @@
             <AccordionItem>
                 <svelte:fragment slot="summary">🖥️ <strong>Frontend</strong></svelte:fragment>
                 <svelte:fragment slot="content">
-                    <i class="devicon-html5-plain colored"></i>
-                    <i class="devicon-css3-plain colored"></i>
-                    <i class="devicon-tailwindcss-plain colored"></i>
-                    <i class="devicon-javascript-plain colored"></i>
-                    <i class="devicon-typescript-plain colored"></i>
-                    <i class="devicon-svelte-plain colored"></i>    
+                    <div class="w-full flex justify-evenly items-center">
+                        <i class="devicon-html5-plain colored skills-devicon"></i>
+                        <i class="devicon-css3-plain colored skills-devicon"></i>
+                        <i class="devicon-tailwindcss-plain colored skills-devicon"></i>
+                        <i class="devicon-javascript-plain colored skills-devicon"></i>
+                        <i class="devicon-typescript-plain colored skills-devicon"></i>
+                        <i class="devicon-svelte-plain colored skills-devicon"></i>    
+                    </div>
                 </svelte:fragment>
             </AccordionItem>
         </div>
@@ -23,11 +25,13 @@
             <AccordionItem>
                 <svelte:fragment slot="summary">⚙️ <strong>Backend</strong></svelte:fragment>
                 <svelte:fragment slot="content">
-                    <i class="devicon-java-plain colored"></i>
-                    <i class="devicon-csharp-plain colored"></i>
-                    <i class="devicon-postgresql-plain colored"></i>
-                    <i class="devicon-microsoftsqlserver-plain"></i>
-                    <i class="devicon-node-plain colored"></i>
+                    <div class="w-full flex justify-evenly items-center">
+                        <i class="devicon-nodejs-plain colored skills-devicon"></i>
+                        <i class="devicon-java-plain colored skills-devicon"></i>
+                        <i class="devicon-csharp-plain colored skills-devicon"></i>
+                        <i class="devicon-postgresql-plain colored skills-devicon"></i>
+                        <i class="devicon-microsoftsqlserver-plain colored skills-devicon"></i>
+                    </div>
                 </svelte:fragment>
             </AccordionItem>
         </div>
@@ -35,11 +39,13 @@
             <AccordionItem>
                 <svelte:fragment slot="summary">🔧 <strong>Tooling</strong></svelte:fragment>
                 <svelte:fragment slot="content">
-                    <i class="devicon-rest-plain colored"></i>
-                    <i class="devicon-git-plain colored"></i>
-                    <i class="devicon-docker-plain colored"></i>
-                    <i class="devicon-figma-plain colored"></i>
-                    <i class="devicon-photoshop-plain colored"></i>
+                    <div class="w-full flex justify-evenly items-center">
+                        <i class="devicon-rest-plain colored skills-devicon"></i>
+                        <i class="devicon-git-plain colored skills-devicon"></i>
+                        <i class="devicon-docker-plain colored skills-devicon"></i>
+                        <i class="devicon-figma-plain colored skills-devicon"></i>
+                        <i class="devicon-photoshop-plain colored skills-devicon"></i>
+                    </div>
                 </svelte:fragment>
             </AccordionItem>
         </div>
