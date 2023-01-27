@@ -54,7 +54,22 @@
 
 <AppBar slotTrail="m-0" padding="px-[5vw] py-4" shadow="{yScroll<=0 ? "shadow-none" : "shadow-lg"}" background="{yScroll<=0 ? "bg-none" : "bg-surface-100-800-token"}">
 	<svelte:fragment slot="lead">
-        <a href="/" class="font-semibold text-xl px-4">Hugo Korte</a>
+        <a href="/" class="font-semibold text-xl px-4">
+            <svg class="w-12 text-token" viewBox="0 0 207 207" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2_2)">
+                    <line x1="96" x2="96" y2="210" stroke="currentColor" stroke-width="18"/>
+                    <line x1="1" y1="82" x2="104.005" y2="82" stroke="currentColor" stroke-width="18"/>
+                    <line x1="9" x2="9" y2="210" stroke="currentColor" stroke-width="18"/>
+                    <line y1="-9" x2="262.551" y2="-9" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 87 81.6516)" stroke="currentColor" stroke-width="18"/>
+                    <line x1="93.364" y1="75.636" x2="279.016" y2="261.288" stroke="currentColor" stroke-width="18"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_2_2">
+                    <rect width="190" height="165" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>    
+        </a>
     </svelte:fragment>
 	<svelte:fragment slot="trail">
         <nav class="hidden md:block">
