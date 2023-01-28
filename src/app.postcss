@@ -27,3 +27,13 @@ label {
 .skills-devicon {
     @apply aspect-square text-[clamp(3rem,5vw,5rem)];
 }
+
+.blink {
+    animation: blink 1s step-start infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }

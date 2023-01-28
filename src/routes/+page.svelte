@@ -24,6 +24,7 @@
         "playing games"
     ];
 
+    let isTyping: boolean = false;
     let sentenceIndex: number = 0;
     setInterval(() => {
         if (sentenceIndex >= personalitySentences.length-1) sentenceIndex = 0;
@@ -62,8 +63,14 @@
     <p class="whitespace-nowrap" in:fly={{delay: 2000, duration: 1000, easing: cubicOut}}>
         I love
         {#key sentenceIndex}
-            <strong in:typewriter|local={{delay: 750, speed: 0.75}} out:typewriter|local={{speed: 2.5}}>{personalitySentences[sentenceIndex] + "."}</strong>
+            <strong 
+            in:typewriter|local={{delay: 750, speed: 0.75}} 
+            out:typewriter|local={{speed: 2.5}}
+            on:outrostart="{() => {isTyping=true}}"
+            on:introend="{() => {isTyping=false}}"
+            >{personalitySentences[sentenceIndex]}</strong>
         {/key}
+        <span class:blink={!isTyping}>|</span>
     </p>
     <div class="w-min flex gap-[7.5vw]" in:fly={{delay: 2000, duration: 1000, y: 100, easing: cubicOut}}>
         <button class="btn btn-lg variant-filled" on:click={() => openContactModal()}>Lets Talk!</button>
