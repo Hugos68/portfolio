@@ -15,61 +15,36 @@
         };
         modalStore.trigger(modalSettings);
     }
-
-    interface VerbSubjectCombo {
-        verb: string,
-        subject: string
-    }
-    const verbSubjectCombo: VerbSubjectCombo[] = [
-        {
-            verb: "solving",
-            subject: "problems"
-        },
-        {
-            verb: "drinking",
-            subject: "coffee"
-        },
-        {
-            verb: "writing",
-            subject: "code"
-        },
-        {
-            verb: "learning",
-            subject: "new things"
-        },
-        {
-            verb: "developing",
-            subject: "software"
-        },
-        {
-            verb: "playing",
-            subject: "games"
-        },
+    const personalitySentences: string[] = [
+        "solving problems",
+        "drinking coffee",
+        "writing code",
+        "learning new things",
+        "developing software",
+        "playing games"
     ];
 
-    let currentComboIndex: number = 0;
+    let sentenceIndex: number = 0;
     setInterval(() => {
-        if (currentComboIndex >= verbSubjectCombo.length-1) currentComboIndex = 0;
-        else currentComboIndex+=1;
+        if (sentenceIndex >= personalitySentences.length-1) sentenceIndex = 0;
+        else sentenceIndex+=1;
     }, 6000)
 
-    function typewriter(node, { delay = 0, speed = 1 }) {
+    function typewriter(node: HTMLElement, { delay = 0, speed = 1 }) {
         const valid = (
             node.childNodes.length === 1 &&
             node.childNodes[0].nodeType === Node.TEXT_NODE
         );
 
-        if (!valid) {
-            throw new Error(`This transition only works on elements with a single text node child`);
-        }
-
-        const text = node.textContent;
+        if (!valid) throw new Error(`This transition only works on elements with a single text node child`);
+        
+        const text: string = node.textContent || "";
         const duration = text.length / (speed * 0.01);
 
         return {
             delay,
             duration,
-            tick: t => {
+            tick: (t: number) => {
                 const i = Math.trunc(text.length * t);
                 node.textContent = text.slice(0, i);
             }
@@ -86,8 +61,8 @@
     </div>
     <p class="whitespace-nowrap" in:fly={{delay: 2000, duration: 1000, easing: cubicOut}}>
         I love
-        {#key currentComboIndex}
-            <strong in:typewriter|local={{delay: 750, speed: 0.75}} out:typewriter|local={{speed: 2.5}}>{verbSubjectCombo[currentComboIndex].verb + " " +verbSubjectCombo[currentComboIndex].subject + "."}</strong>
+        {#key sentenceIndex}
+            <strong in:typewriter|local={{delay: 750, speed: 0.75}} out:typewriter|local={{speed: 2.5}}>{personalitySentences[sentenceIndex] + "."}</strong>
         {/key}
     </p>
     <div class="w-min flex gap-[7.5vw]" in:fly={{delay: 2000, duration: 1000, y: 100, easing: cubicOut}}>
