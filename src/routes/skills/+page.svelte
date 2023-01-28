@@ -50,11 +50,10 @@
                 <svelte:fragment slot="content">
                     {#if toolingOpened}
                         <div class="w-full flex justify-evenly items-center" in:fly={{y: -100, duration: 250, easing: cubicOut}}>
-                            <i class="devicon-rest-plain colored skills-devicon"></i>
-                            <i class="devicon-git-plain colored skills-devicon"></i>
-                            <i class="devicon-docker-plain colored skills-devicon"></i>
-                            <i class="devicon-figma-plain colored skills-devicon"></i>
-                            <i class="devicon-photoshop-plain colored skills-devicon"></i>
+                            <i class="devicon-git-plain colored skills-devicon" use:tooltip={{content: "Git"}}></i>
+                            <i class="devicon-docker-plain colored skills-devicon" use:tooltip={{content: "Docker"}}></i>
+                            <i class="devicon-figma-plain colored skills-devicon" use:tooltip={{content: "Figma"}}></i>
+                            <i class="devicon-photoshop-plain colored skills-devicon" use:tooltip={{content: "Photoshop"}}></i>
                         </div>
                     {/if}
                 </svelte:fragment>
