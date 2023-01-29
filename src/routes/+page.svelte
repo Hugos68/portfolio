@@ -58,12 +58,12 @@
 
 <div class="h-full flex flex-col items-center justify-evenly">
     <div>
-        <h1 class="unstyled text-[clamp(3rem,10vw,5rem)]" in:fly={{duration: 1000, x: 100, easing: cubicOut}}>Hugo Korte</h1>
-        <h1 class="unstyled selection:whitespace-nowrap text-[clamp(1.5rem,5vw,3rem)]" in:fly={{delay: 100, duration: 1000, x: 100, easing: cubicOut}}>
+        <p class="unstyled text-[clamp(3rem,10vw,5rem)]" in:fly={{duration: 1000, x: 100, easing: cubicOut}}>Hugo Korte</p>
+        <p class="unstyled text-[clamp(1.5rem,5vw,3rem)]" in:fly={{delay: 100, duration: 1000, x: 100, easing: cubicOut}}>
             I am a Software Developer.
-        </h1>
+        </p>
     </div>
-    <p class="px-0" in:fly={{delay: 600, duration: 1000, easing: cubicOut}}>
+    <p class="px-0" in:fly={{delay: 750, duration: 1000, easing: cubicOut}}>
         I love
         {#key sentenceIndex}
             <strong

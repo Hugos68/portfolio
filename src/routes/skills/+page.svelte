@@ -28,7 +28,7 @@
                 </svelte:fragment>
             </AccordionItem>
         </div>
-        <div class="card transition-colors" in:fly={{delay: 250, duration: 750, y: 250, easing: cubicOut}}>
+        <div class="card transition-colors" in:fly={{delay: 75, duration: 750, y: 250, easing: cubicOut}}>
             <AccordionItem bind:open={backendOpened}>
                 <svelte:fragment slot="summary">⚙️ <strong>Backend</strong></svelte:fragment>
                 <svelte:fragment slot="content">
@@ -44,7 +44,7 @@
                 </svelte:fragment>
             </AccordionItem>
         </div>
-        <div class="card transition-colors" in:fly={{delay: 500, duration: 750, y: 250, easing: cubicOut}}>
+        <div class="card transition-colors" in:fly={{delay: 150, duration: 750, y: 250, easing: cubicOut}}>
             <AccordionItem bind:open={toolingOpened}>
                 <svelte:fragment slot="summary">🔧 <strong>Tooling</strong></svelte:fragment>
                 <svelte:fragment slot="content">

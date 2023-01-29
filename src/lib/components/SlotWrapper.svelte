@@ -11,8 +11,10 @@
 <div class="page">
     {#if mounted}
         {#if $page.route.id!=="/"}
-            <h1 class="capitalize" in:fade>{$page.route.id?.substring(1).replace('-', ' ')}</h1>
-            <hr class="my-8" in:fade>
+            <div class="mx-[15vw]">
+                <h1 class="capitalize" in:fade>{$page.route.id?.substring(1).replace('-', ' ')}</h1>
+                <hr class="my-8" in:fade>
+            </div>
         {/if}
         <slot />
     {/if}
