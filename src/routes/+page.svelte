@@ -59,19 +59,20 @@
             I am a Software Developer.
         </p>
     </div>
-    <p class="px-0" in:fly={{delay: 750, duration: 1000, easing: cubicOut}}>
-        I love
+    <p class="px-0 flex" in:fly={{delay: 750, duration: 1000, easing: cubicOut}}>
+        I love&nbsp;
         {#key sentenceIndex}
             <strong
                 in:typewriter={{delay: 750, speed: 0.75}}
                 out:typewriter|local={{speed: 2.5}}
-                on:outrostart="{() => blinkingCursor.classList.toggle('blink')}"
+                on:outrostart="{() => blinkingCursor.classList.remove('blink')}"
+
                 on:introend="{() => {
-                    blinkingCursor.classList.toggle('blink');
+                    blinkingCursor.classList.add('blink');
                     setTimeout(() => sentenceIndex = (sentenceIndex + 1) % personalitySentences.length, 2500);
                 }}"
-            >{personalitySentences[sentenceIndex]}</strong><span bind:this={blinkingCursor}>|</span>
-        {/key}
+            >{personalitySentences[sentenceIndex]}</strong>
+        {/key}<span class="block" bind:this={blinkingCursor}>|</span>
     </p>
     <div class="w-min flex gap-[7.5vw]" in:fly={{delay: 300, duration: 1000, y: 100, easing: cubicOut}}>
         <button class="btn btn-lg variant-filled" on:click={() => openContactModal()}>Lets Talk!</button>
