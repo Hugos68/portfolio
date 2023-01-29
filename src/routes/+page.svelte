@@ -32,11 +32,8 @@
             node.childNodes[0].nodeType === Node.TEXT_NODE
         );
 
-        if (!valid) {
-            console.log(node.childNodes.length);
-            console.log(node.childNodes[0].nodeType);
-            throw new Error(`This transition only works on elements with a single text node child`);
-        }
+        if (!valid) throw new Error(`This transition only works on elements with a single text node child`);
+        
         const text: string = node.textContent || "";
         const duration = text.length / (speed * 0.01);
 
