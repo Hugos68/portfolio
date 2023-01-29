@@ -11,7 +11,7 @@
 <div class="page">
     {#if mounted}
         {#if $page.route.id!=="/"}
-            <h1 class="text-center capitalize" in:fade>{$page.route.id?.substring(1)}</h1>
+            <h1 class="capitalize" in:fade>{$page.route.id?.substring(1)}</h1>
             <hr class="my-8" in:fade>
         {/if}
         <slot />

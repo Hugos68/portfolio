@@ -17,12 +17,12 @@
     }
 
     const personalitySentences: string[] = [
-        "solving problems",
-        "drinking coffee",
-        "writing code",
-        "learning new things",
-        "developing software",
-        "playing games"
+        "solving problem.s",
+        "drinking coffee.",
+        "writing code.",
+        "learning new things.",
+        "developing software.",
+        "playing games."
     ];
 
     const SENTENCE_SWITCH_INTERVAL_MS = 5000;
@@ -58,12 +58,12 @@
 
 <div class="h-full flex flex-col items-center justify-evenly">
     <div>
-        <p class="text-center" in:fly={{duration: 1000, y: -100, easing: cubicOut}}>Hi my name is</p>
-        <h1 class="unstyled text-center text-[clamp(2.75rem,14vw,10rem)]" in:fly={{delay: 333, duration: 1000, x: 100, easing: cubicOut}}>Hugo Korte</h1>
-        <p class="text-center" in:fly={{delay: 666, duration: 1000, y: 100, easing: cubicOut}}>I am a</p>
-        <h1 class="unstyled text-center selection:whitespace-nowrap text-[clamp(2rem,8vw,10rem)]" in:fly={{delay: 999, duration: 1000, x: -100, easing: cubicOut}}>Software Developer.</h1>
+        <h1 class="unstyled text-[clamp(3rem,10vw,5rem)]" in:fly={{delay: 250, duration: 1000, x: 100, easing: cubicOut}}>Hugo Korte</h1>
+        <h1 class="unstyled selection:whitespace-nowrap text-[clamp(1.5rem,5vw,3rem)]" in:fly={{delay: 500, duration: 1000, x: 100, easing: cubicOut}}>
+            I am a Software Developer.
+        </h1>
     </div>
-    <p class="px-0" in:fly={{delay: 1332, duration: 1000, easing: cubicOut}}>
+    <p class="px-0" in:fly={{delay: 750, duration: 1000, easing: cubicOut}}>
         I love
         {#key sentenceIndex}
             <strong
@@ -74,7 +74,7 @@
             >{personalitySentences[sentenceIndex]}</strong><span class:blink={!isTyping}>|</span>
         {/key}
     </p>
-    <div class="w-min flex gap-[7.5vw]" in:fly={{delay: 1250, duration: 1000, y: 100, easing: cubicOut}}>
+    <div class="w-min flex gap-[7.5vw]" in:fly={{delay: 1000, duration: 1000, y: 100, easing: cubicOut}}>
         <button class="btn btn-lg variant-filled" on:click={() => openContactModal()}>Lets Talk!</button>
         <a class="btn btn-lg variant-filled" href="Hugo_Korte_Resume_2023-25-1.pdf" download="Hugo_Korte_Resume_2023-25-1">Resume</a>
     </div>
