@@ -25,23 +25,18 @@
         "playing games."
     ];
 
-    const SENTENCE_SWITCH_INTERVAL_MS = 5000;
-
-    let isTyping: boolean = false;
     let sentenceIndex: number = 0;
-    setInterval(() => {
-        if (sentenceIndex >= personalitySentences.length-1) sentenceIndex = 0;
-        else sentenceIndex+=1;
-    }, SENTENCE_SWITCH_INTERVAL_MS);
-
     function typewriter(node: HTMLElement, { delay = 0, speed = 1 }) {
         const valid = (
             node.childNodes.length === 1 &&
             node.childNodes[0].nodeType === Node.TEXT_NODE
         );
 
-        if (!valid) throw new Error(`This transition only works on elements with a single text node child`);
-        
+        if (!valid) {
+            console.log(node.childNodes.length);
+            console.log(node.childNodes[0].nodeType);
+            throw new Error(`This transition only works on elements with a single text node child`);
+        }
         const text: string = node.textContent || "";
         const duration = text.length / (speed * 0.01);
 
@@ -54,6 +49,7 @@
             }
         };
     }
+    let blinkingCursor: HTMLElement;
 </script>
 
 <div class="h-full flex flex-col items-center justify-evenly">
@@ -69,9 +65,12 @@
             <strong
                 in:typewriter={{delay: 750, speed: 0.75}}
                 out:typewriter|local={{speed: 2.5}}
-                on:outrostart="{() => {isTyping=true}}"
-                on:introend="{() => {isTyping=false}}"
-            >{personalitySentences[sentenceIndex]}</strong><span class:blink={!isTyping}>|</span>
+                on:outrostart="{() => blinkingCursor.classList.toggle('blink')}"
+                on:introend="{() => {
+                    blinkingCursor.classList.toggle('blink');
+                    setTimeout(() => sentenceIndex = (sentenceIndex + 1) % personalitySentences.length, 2500);
+                }}"
+            >{personalitySentences[sentenceIndex]}</strong><span bind:this={blinkingCursor}>|</span>
         {/key}
     </p>
     <div class="w-min flex gap-[7.5vw]" in:fly={{delay: 300, duration: 1000, y: 100, easing: cubicOut}}>
