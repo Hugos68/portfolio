@@ -72,7 +72,8 @@
                     setTimeout(() => sentenceIndex = (sentenceIndex + 1) % personalitySentences.length, 2500);
                 }}"
             >{personalitySentences[sentenceIndex]}</strong>
-        {/key}<span class="block" bind:this={blinkingCursor}>|</span>
+        {/key}
+        <span class="block" bind:this={blinkingCursor}>|</span>
     </p>
     <div class="w-min flex gap-[7.5vw]" in:fly={{delay: 300, duration: 1000, y: 100, easing: cubicOut}}>
         <button class="btn btn-lg variant-filled" on:click={() => openContactModal()}>Lets Talk!</button>
