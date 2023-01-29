@@ -34,7 +34,7 @@
 </script>
 <div class="flex flex-wrap gap-12 px-6">
     {#each projects as project, i}
-        <div class="flex-[33rem]" in:fly={{delay: 75 * i, y: 50, duration: 750, easing: cubicOut}}>
+        <div class="flex-[25rem]" in:fly={{delay: 75 * i, y: 50, duration: 750, easing: cubicOut}}>
             <ProjectCard 
                 title={project.title}
                 description={project.description}
