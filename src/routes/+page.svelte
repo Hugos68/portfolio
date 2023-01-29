@@ -15,6 +15,7 @@
         };
         modalStore.trigger(modalSettings);
     }
+
     const personalitySentences: string[] = [
         "solving problems",
         "drinking coffee",
@@ -24,12 +25,14 @@
         "playing games"
     ];
 
+    const SENTENCE_SWITCH_INTERVAL_MS = 5000;
+
     let isTyping: boolean = false;
     let sentenceIndex: number = 0;
     setInterval(() => {
         if (sentenceIndex >= personalitySentences.length-1) sentenceIndex = 0;
         else sentenceIndex+=1;
-    }, 6000)
+    }, SENTENCE_SWITCH_INTERVAL_MS);
 
     function typewriter(node: HTMLElement, { delay = 0, speed = 1 }) {
         const valid = (
@@ -56,23 +59,22 @@
 <div class="h-full flex flex-col items-center justify-evenly">
     <div>
         <p class="text-center" in:fly={{duration: 1000, y: -100, easing: cubicOut}}>Hi my name is</p>
-        <h1 class="unstyled text-center text-[clamp(2.75rem,14vw,10rem)]" in:fly={{delay: 500, duration: 1000, x: 100, easing: cubicOut}}>Hugo Korte</h1>
-        <p class="text-center" in:fly={{delay: 1000, duration: 1000, y: 100, easing: cubicOut}}>I am a</p>
-        <h1 class="unstyled text-center selection:whitespace-nowrap text-[clamp(2rem,8vw,10rem)]" in:fly={{delay: 1500, duration: 1000, x: -100, easing: cubicOut}}>Software Developer.</h1>
+        <h1 class="unstyled text-center text-[clamp(2.75rem,14vw,10rem)]" in:fly={{delay: 333, duration: 1000, x: 100, easing: cubicOut}}>Hugo Korte</h1>
+        <p class="text-center" in:fly={{delay: 666, duration: 1000, y: 100, easing: cubicOut}}>I am a</p>
+        <h1 class="unstyled text-center selection:whitespace-nowrap text-[clamp(2rem,8vw,10rem)]" in:fly={{delay: 999, duration: 1000, x: -100, easing: cubicOut}}>Software Developer.</h1>
     </div>
-    <p class="whitespace-nowrap" in:fly={{delay: 2000, duration: 1000, easing: cubicOut}}>
+    <p class="px-0" in:fly={{delay: 1332, duration: 1000, easing: cubicOut}}>
         I love
         {#key sentenceIndex}
-            <strong 
-            in:typewriter|local={{delay: 750, speed: 0.75}} 
-            out:typewriter|local={{speed: 2.5}}
-            on:outrostart="{() => {isTyping=true}}"
-            on:introend="{() => {isTyping=false}}"
-            >{personalitySentences[sentenceIndex]}</strong>
+            <strong
+                in:typewriter={{delay: 750, speed: 0.75}}
+                out:typewriter|local={{speed: 2.5}}
+                on:outrostart="{() => {isTyping=true}}"
+                on:introend="{() => {isTyping=false}}"
+            >{personalitySentences[sentenceIndex]}</strong><span class:blink={!isTyping}>|</span>
         {/key}
-        <span class:blink={!isTyping}>|</span>
     </p>
-    <div class="w-min flex gap-[7.5vw]" in:fly={{delay: 2000, duration: 1000, y: 100, easing: cubicOut}}>
+    <div class="w-min flex gap-[7.5vw]" in:fly={{delay: 1250, duration: 1000, y: 100, easing: cubicOut}}>
         <button class="btn btn-lg variant-filled" on:click={() => openContactModal()}>Lets Talk!</button>
         <a class="btn btn-lg variant-filled" href="Hugo_Korte_Resume_2023-25-1.pdf" download="Hugo_Korte_Resume_2023-25-1">Resume</a>
     </div>

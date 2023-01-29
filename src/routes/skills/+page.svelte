@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { AccordionGroup, AccordionItem, tooltip } from "@skeletonlabs/skeleton";
 	import { fly } from "svelte/transition";
-    import { cubicOut, elasticOut } from "svelte/easing"
+    import { cubicOut } from "svelte/easing"
 
     let frontendOpened: boolean = false;
     let backendOpened: boolean = false;
