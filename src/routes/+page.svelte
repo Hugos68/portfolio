@@ -17,7 +17,7 @@
     }
 
     const personalitySentences: string[] = [
-        "solving problem.s",
+        "solving problems.",
         "drinking coffee.",
         "writing code.",
         "learning new things.",
@@ -58,12 +58,12 @@
 
 <div class="h-full flex flex-col items-center justify-evenly">
     <div>
-        <h1 class="unstyled text-[clamp(3rem,10vw,5rem)]" in:fly={{delay: 250, duration: 1000, x: 100, easing: cubicOut}}>Hugo Korte</h1>
-        <h1 class="unstyled selection:whitespace-nowrap text-[clamp(1.5rem,5vw,3rem)]" in:fly={{delay: 500, duration: 1000, x: 100, easing: cubicOut}}>
+        <h1 class="unstyled text-[clamp(3rem,10vw,5rem)]" in:fly={{duration: 1000, x: 100, easing: cubicOut}}>Hugo Korte</h1>
+        <h1 class="unstyled selection:whitespace-nowrap text-[clamp(1.5rem,5vw,3rem)]" in:fly={{delay: 100, duration: 1000, x: 100, easing: cubicOut}}>
             I am a Software Developer.
         </h1>
     </div>
-    <p class="px-0" in:fly={{delay: 750, duration: 1000, easing: cubicOut}}>
+    <p class="px-0" in:fly={{delay: 600, duration: 1000, easing: cubicOut}}>
         I love
         {#key sentenceIndex}
             <strong
@@ -74,7 +74,7 @@
             >{personalitySentences[sentenceIndex]}</strong><span class:blink={!isTyping}>|</span>
         {/key}
     </p>
-    <div class="w-min flex gap-[7.5vw]" in:fly={{delay: 1000, duration: 1000, y: 100, easing: cubicOut}}>
+    <div class="w-min flex gap-[7.5vw]" in:fly={{delay: 300, duration: 1000, y: 100, easing: cubicOut}}>
         <button class="btn btn-lg variant-filled" on:click={() => openContactModal()}>Lets Talk!</button>
         <a class="btn btn-lg variant-filled" href="Hugo_Korte_Resume_2023-25-1.pdf" download="Hugo_Korte_Resume_2023-25-1">Resume</a>
     </div>
