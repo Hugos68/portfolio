@@ -22,7 +22,7 @@
         "writing code.",
         "learning new things.",
         "developing software.",
-        "playing games."
+        "thinking outside the box."
     ];
 
     let sentenceIndex: number = 0;
@@ -54,7 +54,8 @@
 
 <div class="h-full flex flex-col items-center justify-evenly">
     <div class="relative p-8">  
-        <div class="absolute w-full h-full border-4 border-current top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] skew-x-[-2.5deg] skew-y-[-5deg]" in:fade={{delay: 500, duration: 1000, easing: cubicOut}}></div>
+        <div class="absolute w-full h-full border-4 border-current top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] skew-x-[-2.5deg] skew-y-[-5deg]" in:fade={{delay: 250, duration: 1000, easing: cubicOut}}></div>
+
         <p class="unstyled text-[clamp(2.75rem,10vw,5rem)]" in:fly={{duration: 1000, x: 100, easing: cubicOut}}>Hugo Korte</p>
         <p class="unstyled text-[clamp(1rem,5vw,3rem)]" in:fly={{delay: 100, duration: 1000, x: 100, easing: cubicOut}}>
             I am a Software Developer.
