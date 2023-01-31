@@ -26,7 +26,7 @@
 		storeLightSwitch.update(state => {return !state});
 		const elemHtmlClassList = document.documentElement.classList;
 		$storeLightSwitch ? elemHtmlClassList.add('dark') : elemHtmlClassList.remove('dark');
-	}
+	}   
 
     const toggleThemeToolTipProps = { 
         content: 'Toggle Theme', 

@@ -8,8 +8,8 @@
             description: "Subjective is a webshop to buy clothes and such, not only have I built this project but am also a stakeholder in the company",
             codeLink: "https://github.com/Hugos68/Subjective-2",
             demoLink: "https://subjective.vercel.app/home",
-            bgImageSrc: "subjective.png",
-            bgImageAlt: "subjective-landing-page",
+            images: ["subjective.png"],
+            alt: "subjective-landing-page",
             techs: ["skeleton", "tailwind", "sveltekit", "node"],
         },
         {
@@ -17,19 +17,19 @@
             description: "Blugo is an online blog used to blog your daily activites, I've built it to practise user management and authentication.",
             codeLink: "https://github.com/Hugos68/blugo",
             demoLink: "https://blugo.vercel.app/home",
-            bgImageSrc: "blugo.png",
-            bgImageAlt: "blugo-landing-page",
+            images: ["blugo.png"],
+            alt: "blugo-landing-page",
             techs: ["skeleton", "tailwind", "sveltekit", "node"],
         },
         {
             title: "Portfolio",
             description: "My portfolio is a personal project to keep track of my skills and projects and to show what I am capable of.",
             codeLink: "https://github.com/Hugos68/portfolio",
-            demoLink: "https://portfolio-hugos68.vercel.app/",
-            bgImageSrc: "portfolio.png",
-            bgImageAlt: "portfolio-landing-page",
+            demoLink: "https://hugokorte.vercel.app/",
+            images: ["portfolio-home.png", "portfolio-skills.png", "portfolio-projects.png"],
+            alt: "portfolio-landing-page",
             techs: ["skeleton", "tailwind", "sveltekit"],
-        },
+        }
     ];
 </script>
 <div class="flex flex-wrap gap-12 px-6">
@@ -40,8 +40,8 @@
                 description={project.description}
                 codeLink={project.codeLink}
                 demoLink={project.demoLink}
-                bgImageSrc={project.bgImageSrc}
-                bgImageAlt={project.bgImageAlt}
+                images={project.images}
+                alt={project.alt}
                 techs={project.techs}
             />
         </div>

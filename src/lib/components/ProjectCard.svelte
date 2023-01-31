@@ -6,8 +6,8 @@
     export let description: string;
     export let codeLink: string;
     export let demoLink: string;
-    export let bgImageSrc: string;
-    export let bgImageAlt: string;
+    export let images: string[];
+    export let alt: string;
     export let techs: string[];
     
     const openProjectModal = (): void => {
@@ -22,8 +22,8 @@
                 description: description,
                 codeLink: codeLink,
                 demoLink: demoLink,
-                bgImageSrc: bgImageSrc,
-                bgImageAlt: bgImageAlt,
+                images: images,
+                alt: alt,
                 techs: techs
             },
         };
@@ -33,6 +33,6 @@
 
 <div class="card w-full h-full aspect-video variant-glass-primary text-white">
     <button class="p-0 m-0" on:click={openProjectModal}>
-        <img class="card z-[-1] translate-x-4 translate-y-4 shadow-xl hover:translate-y-0 duration-200 ease-in-out" src="{bgImageSrc}" alt="{bgImageAlt}">
+        <img class="card z-[-1] translate-x-4 translate-y-4 shadow-xl hover:translate-y-0 duration-200 ease-in-out" src="{images[0]}" alt="{alt}">
     </button>
 </div>
