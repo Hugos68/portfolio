@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ContactMeForm from "$lib/components/ContactMeFormModal.svelte";
 	import { modalStore, type ModalComponent, type ModalSettings } from "@skeletonlabs/skeleton";
-	import { fly } from "svelte/transition";
+	import { fade, fly } from "svelte/transition";
     import { cubicOut } from "svelte/easing";
     
     const openContactModal = (): void => {
@@ -32,8 +32,11 @@
             node.childNodes[0].nodeType === Node.TEXT_NODE
         );
 
-        if (!valid) throw new Error(`This transition only works on elements with a single text node child`);
-        
+        if (!valid) {
+            console.log(node.childNodes.length);
+            console.log(node.childNodes[0].nodeType);
+            throw new Error(`This transition only works on elements with a single text node child`);
+        }
         const text: string = node.textContent || "";
         const duration = text.length / (speed * 0.01);
 
@@ -50,9 +53,10 @@
 </script>
 
 <div class="h-full flex flex-col items-center justify-evenly">
-    <div>
-        <p class="unstyled text-[clamp(3rem,10vw,5rem)]" in:fly={{duration: 1000, x: 100, easing: cubicOut}}>Hugo Korte</p>
-        <p class="unstyled text-[clamp(1.5rem,5vw,3rem)]" in:fly={{delay: 100, duration: 1000, x: 100, easing: cubicOut}}>
+    <div class="relative p-8">  
+        <div class="absolute w-full h-full border-4 border-current top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] skew-x-[-2.5deg] skew-y-[-5deg]" in:fade={{delay: 500, duration: 1000, easing: cubicOut}}></div>
+        <p class="unstyled text-[clamp(2.75rem,10vw,5rem)]" in:fly={{duration: 1000, x: 100, easing: cubicOut}}>Hugo Korte</p>
+        <p class="unstyled text-[clamp(1rem,5vw,3rem)]" in:fly={{delay: 100, duration: 1000, x: 100, easing: cubicOut}}>
             I am a Software Developer.
         </p>
     </div>
@@ -77,6 +81,7 @@
         <a class="btn btn-lg variant-filled" href="Hugo_Korte_Resume_2023-25-1.pdf" download="Hugo_Korte_Resume_2023-25-1">Resume</a>
     </div>
 </div>
+
 
 
 
