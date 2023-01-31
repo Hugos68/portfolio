@@ -61,7 +61,7 @@
         I love&nbsp;
         {#key sentenceIndex}
             <strong
-                in:typewriter={{delay: 825}}
+                in:typewriter={{delay: 850}}
                 out:typewriter|local={{speed: 2.5}}
                 on:outrostart="{() => blinkingCursor.classList.remove('blink')}"
 

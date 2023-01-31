@@ -1,10 +1,9 @@
 <script lang="ts">
 	import { modalStore } from "@skeletonlabs/skeleton";
+    import Carousel from 'svelte-carousel'
     const openLinkInNewTab = (href: string): void => {
         window.open(href);
     }
-
-    import Carousel from 'svelte-carousel'
 </script>
 
 {#if $modalStore[0]}
