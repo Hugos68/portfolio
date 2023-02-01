@@ -15,9 +15,11 @@
                         <path clip-rule="evenodd" d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3165 19.0976 14.6834 19.0976 14.2929 18.7071L8.46963 12.8839C7.98148 12.3957 7.98148 11.6043 8.46963 11.1161L14.2929 5.29289C14.6834 4.90237 15.3165 4.90237 15.7071 5.29289Z"/>
                     </svg>
                 </button>
-                {#each $modalStore[0].meta?.images as image}
-                    <img src="{image}" class="bg-black/50 w-full aspect-video" alt="{$modalStore[0].meta?.bgImageAlt}" />
-                {/each}
+                {#if $modalStore[0]}
+                    {#each $modalStore[0].meta?.images as image}
+                        <img src="{image}" class="bg-black/50 w-full aspect-video" alt="{$modalStore[0].meta?.bgImageAlt}" />
+                    {/each}
+                {/if}
                 <button slot="next" on:click={showNextPage} class="z-[1] absolute btn h-full right-0 top-[50%] translate-y-[-50%] ">
                     <svg class="w-10 md:w-12 p-2 pr-1 variant-ghost rounded-full aspect-square text-dark-token" viewBox="0 0 24 24" fill="currentColor">
                         <path clip-rule="evenodd" d="M8.29289 5.29289C8.68342 4.90237 9.31658 4.90237 9.70711 5.29289L15.5303 11.1161C16.0185 11.6043 16.0185 12.3957 15.5303 12.8839L9.70711 18.7071C9.31658 19.0976 8.68342 19.0976 8.29289 18.7071C7.90237 18.3166 7.90237 17.6834 8.29289 17.2929L13.5858 12L8.29289 6.70711C7.90237 6.31658 7.90237 5.68342 8.29289 5.29289Z"/>
