@@ -33,6 +33,6 @@
 
 <div class="card w-full h-full aspect-video variant-glass-primary text-white">
     <button class="p-0 m-0" on:click={openProjectModal}>
-        <img class="card z-[-1] translate-x-4 translate-y-4 shadow-xl hover:translate-y-0 duration-200 ease-in-out" src="{images[0]}" alt="{alt}">
+        <img class="btn p-0 card z-[-1] translate-x-4 translate-y-4 shadow-xl hover:translate-y-0 duration-200 ease-in-out" src="{images[0]}" alt="{alt}">
     </button>
 </div>
