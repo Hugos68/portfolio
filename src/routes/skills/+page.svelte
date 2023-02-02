@@ -1,78 +1,56 @@
 <script lang="ts">
-	import { AccordionGroup, AccordionItem, tooltip } from "@skeletonlabs/skeleton";
-	import { fade, fly } from "svelte/transition";
-    import { cubicOut } from "svelte/easing"
-
-    let frontendOpened: boolean = false;
-    let backendOpened: boolean = false;
-    let toolingOpened: boolean = false;
-
+	import { tooltip } from "@skeletonlabs/skeleton";
 </script>
 
-<h1 class="mt-[5vh]">Skills</h1>
+<h1>Skills</h1>
 <hr class="my-[2.5vh]">
 
-<section class="bg-primary-500">
-    <h2>Frontend</h2>
-</section>
-
-<section class="bg-secondary-500">
-    <h2>Backend</h2>
-</section>
-
-<section class="bg-tertiary-500">
-    <h2>Tooling</h2>
-</section>
-
-
-<AccordionGroup spacing='space-y-12' padding="p-8" >
-        <div class="card" in:fly={{duration: 750, y: 250, easing: cubicOut}}>
-            <AccordionItem bind:open={frontendOpened}>
-                <svelte:fragment slot="summary">🖥️ <strong>Frontend</strong></svelte:fragment>
-                <svelte:fragment slot="content">
-                    {#if frontendOpened}
-                        <div class="w-full flex justify-evenly items-center" in:fly={{y: -100, duration: 250, easing: cubicOut}}>
-                            <i class="devicon-html5-plain colored skills-devicon" use:tooltip={{content: "HTML"}}></i>
-                            <i class="devicon-css3-plain colored skills-devicon" use:tooltip={{content: "CSS"}}></i>
-                            <i class="devicon-javascript-plain colored skills-devicon" use:tooltip={{content: "JavaScript"}}></i>
-                            <i class="devicon-typescript-plain colored skills-devicon" use:tooltip={{content: "TypeScript"}}></i>
-                            <i class="devicon-tailwindcss-plain colored skills-devicon" use:tooltip={{content: "Tailwind"}}></i>
-                            <i class="devicon-svelte-plain colored skills-devicon" use:tooltip={{content: "Svelte"}}></i>    
-                        </div>
-                    {/if}
-                </svelte:fragment>
-            </AccordionItem>
+<div class="flex flex-col gap-[33vh] my-[20vh]">
+    <section class="flex justify-around flex-row-reverse items-start flex-wrap gap-12 card card-hover p-8">
+        <div>
+            <h2 class="unstyled text-[clamp(3rem,15vw,6rem)]">Frontend</h2>
+            <p class="max-w-[50ch]">
+                Building frontend applications is where my digital heart lies when it comes to my preference, creating an <strong>elegant</strong> and <strong>accessible</strong> UI is something I strive for during every single one of my projects.
+            </p>
         </div>
-        <div class="card" in:fly={{delay: 75, duration: 750, y: 250, easing: cubicOut}}>
-            <AccordionItem bind:open={backendOpened}>
-                <svelte:fragment slot="summary">⚙️ <strong>Backend</strong></svelte:fragment>
-                <svelte:fragment slot="content">
-                    {#if backendOpened}
-                        <div class="w-full flex justify-evenly items-center" in:fly={{y: -100, duration: 250, easing: cubicOut}}>
-                            <i class="devicon-nodejs-plain colored skills-devicon" use:tooltip={{content: "Node"}}></i>
-                            <i class="devicon-java-plain colored skills-devicon" use:tooltip={{content: "Java"}}></i>
-                            <i class="devicon-csharp-plain colored skills-devicon" use:tooltip={{content: "C#"}}></i>
-                            <i class="devicon-postgresql-plain colored skills-devicon" use:tooltip={{content: "PostgreSQL"}}></i>
-                            <i class="devicon-microsoftsqlserver-plain colored skills-devicon" use:tooltip={{content: "MicrosoftSQL"}}></i>
-                        </div>
-                    {/if}
-                </svelte:fragment>
-            </AccordionItem>
+        <div class="grid grid-cols-3 gap-[5vw]">
+            <i class="devicon-html5-plain colored skills-devicon" use:tooltip={{content: "HTML"}}></i>
+            <i class="devicon-css3-plain colored skills-devicon" use:tooltip={{content: "CSS"}}></i>
+            <i class="devicon-javascript-plain colored skills-devicon" use:tooltip={{content: "JavaScript"}}></i>
+            <i class="devicon-typescript-plain colored skills-devicon" use:tooltip={{content: "TypeScript"}}></i>
+            <i class="devicon-tailwindcss-plain colored skills-devicon" use:tooltip={{content: "Tailwind"}}></i>
+            <i class="devicon-svelte-plain colored skills-devicon" use:tooltip={{content: "Svelte"}}></i>    
         </div>
-        <div class="card" in:fly={{delay: 150, duration: 750, y: 250, easing: cubicOut}}>
-            <AccordionItem bind:open={toolingOpened}>
-                <svelte:fragment slot="summary">🔧 <strong>Tooling</strong></svelte:fragment>
-                <svelte:fragment slot="content">
-                    {#if toolingOpened}
-                        <div class="w-full flex justify-evenly items-center" in:fly={{y: -100, duration: 250, easing: cubicOut}}>
-                            <i class="devicon-git-plain colored skills-devicon" use:tooltip={{content: "Git"}}></i>
-                            <i class="devicon-docker-plain colored skills-devicon" use:tooltip={{content: "Docker"}}></i>
-                            <i class="devicon-figma-plain colored skills-devicon" use:tooltip={{content: "Figma"}}></i>
-                            <i class="devicon-photoshop-plain colored skills-devicon" use:tooltip={{content: "Photoshop"}}></i>
-                        </div>
-                    {/if}
-                </svelte:fragment>
-            </AccordionItem>
+  
+    </section>
+
+    <section class="flex justify-around items-start flex-wrap gap-12 card card-hover p-8">
+        <div>
+            <h2 class="unstyled text-[clamp(3rem,15vw,6rem)]">Backend</h2>
+            <p class="max-w-[50ch]">
+                Building backends is one of the most important aspects to any application. When I am building backend applications I ensure proper <strong>security</strong> along with <strong>fast</strong> and <strong>efficient</strong> solutions to logical problems.
+            </p>
         </div>
-</AccordionGroup>
+        <div class="grid grid-cols-3 gap-[5vw]">
+            <i class="devicon-nodejs-plain colored skills-devicon" use:tooltip={{content: "Node"}}></i>
+            <i class="devicon-java-plain colored skills-devicon" use:tooltip={{content: "Java"}}></i>
+            <i class="devicon-csharp-plain colored skills-devicon" use:tooltip={{content: "C#"}}></i>
+            <i class="devicon-postgresql-plain colored skills-devicon" use:tooltip={{content: "PostgreSQL"}}></i>
+            <i class="devicon-microsoftsqlserver-plain colored skills-devicon" use:tooltip={{content: "MicrosoftSQL"}}></i>
+        </div>
+    </section>
+
+    <section class="flex justify-around flex-row-reverse items-start flex-wrap gap-12 card card-hover p-8">
+        <div>
+            <h2 class="unstyled text-[clamp(3rem,15vw,6rem)]">Tooling</h2>
+            <p class="max-w-[50ch]">People often not mention it but using the <strong>right tools</strong> for the right job is very important to create and <strong>efficient</strong> workflow whilst making the developer experience enjoyable. That is why I enjoy <strong>teaching</strong> myself and others how to use certain tools.</p>
+        </div>
+        <div class="grid grid-cols-3 gap-[5vw]">
+            <i class="devicon-git-plain colored skills-devicon" use:tooltip={{content: "Git"}}></i>
+            <i class="devicon-docker-plain colored skills-devicon" use:tooltip={{content: "Docker"}}></i>
+            <i class="devicon-figma-plain colored skills-devicon" use:tooltip={{content: "Figma"}}></i>
+            <i class="devicon-photoshop-plain colored skills-devicon" use:tooltip={{content: "Photoshop"}}></i>
+        </div>
+    </section>
+</div>
 

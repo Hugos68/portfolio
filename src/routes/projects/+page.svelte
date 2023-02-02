@@ -33,7 +33,7 @@
     ];
 </script>
 
-<h1 class="mt-[5vh]">Projects</h1>
+<h1>Projects</h1>
 <hr class="my-[2.5vh]">
 
 
