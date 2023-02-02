@@ -11,7 +11,7 @@
 
 
 <AccordionGroup spacing='space-y-12' padding="p-8" >
-        <div class="card in:fly={{duration: 750, y: 250, easing: cubicOut}}>
+        <div class="card" in:fly={{duration: 750, y: 250, easing: cubicOut}}>
             <AccordionItem bind:open={frontendOpened}>
                 <svelte:fragment slot="summary">🖥️ <strong>Frontend</strong></svelte:fragment>
                 <svelte:fragment slot="content">
