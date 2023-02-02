@@ -6,7 +6,7 @@
 <hr class="my-[2.5vh]">
 
 <div class="flex flex-col gap-[33vh] my-[20vh]">
-    <section class="flex justify-around flex-row-reverse items-start flex-wrap gap-12 card card-hover p-8">
+    <section class="flex justify-around flex-row-reverse items-start flex-wrap gap-12 transition-none card p-8">
         <div>
             <h2 class="unstyled text-[clamp(3rem,15vw,6rem)]">Frontend</h2>
             <p class="max-w-[50ch]">
@@ -24,7 +24,7 @@
   
     </section>
 
-    <section class="flex justify-around items-start flex-wrap gap-12 card card-hover p-8">
+    <section class="flex justify-around items-start flex-wrap gap-12 transition-none card p-8">
         <div>
             <h2 class="unstyled text-[clamp(3rem,15vw,6rem)]">Backend</h2>
             <p class="max-w-[50ch]">
@@ -40,7 +40,7 @@
         </div>
     </section>
 
-    <section class="flex justify-around flex-row-reverse items-start flex-wrap gap-12 card card-hover p-8">
+    <section class="flex justify-around flex-row-reverse items-start flex-wrap gap-12 transition-none card p-8">
         <div>
             <h2 class="unstyled text-[clamp(3rem,15vw,6rem)]">Tooling</h2>
             <p class="max-w-[50ch]">People often not mention it but using the <strong>right tools</strong> for the right job is very important to create and <strong>efficient</strong> workflow whilst making the developer experience enjoyable. That is why I enjoy <strong>teaching</strong> myself and others how to use certain tools.</p>
