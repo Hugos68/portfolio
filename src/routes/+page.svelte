@@ -3,18 +3,6 @@
 	import { modalStore, type ModalComponent, type ModalSettings } from "@skeletonlabs/skeleton";
 	import { fade, fly } from "svelte/transition";
     import { cubicOut } from "svelte/easing";
-    
-    const openContactModal = (): void => {
-        const modalComponent: ModalComponent = {
-            ref:  ContactMeForm,
-        };
-            const modalSettings: ModalSettings = {
-            type: 'component',
-            component: modalComponent,
-
-        };
-        modalStore.trigger(modalSettings);
-    }
 
     const personalitySentences: string[] = [
         "solving problems",
@@ -74,7 +62,7 @@
         <span class="block" bind:this={blinkingCursor}>|</span>
     </p>
     <div class="w-min flex gap-[7.5vw]" in:fly={{delay: 300, duration: 1000, y: 100, easing: cubicOut}}>
-        <button class="btn lg:btn-lg variant-filled-primary" on:click={() => openContactModal()}>Let's Talk!</button>
+        <a class="btn lg:btn-lg variant-filled-primary" href="/about-me">About Me</a>
         <a class="btn lg:btn-lg variant-filled-secondary" href="Hugo_Korte_Resume_2023-25-1.pdf" download="Hugo_Korte_Resume_2023-25-1">Résumé</a>
     </div>
 </div>
