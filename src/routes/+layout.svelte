@@ -13,7 +13,7 @@
 <!-- OVERLAYS -->
 <Toast />
 <ManagedDrawer />
-<Modal padding="p-0" width="max-w-[clamp(25rem,50vw,75rem)]"/>
+<Modal padding="p-0" width="max-w-[min(60rem,90vw)]"/>
 
 
 <!-- MAIN STRUCTURE -->
