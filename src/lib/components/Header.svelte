@@ -76,7 +76,7 @@
 <AppBar slotTrail="p-0 m-0" padding="px-[15vw] py-4" shadow="{yScroll<=0 ? "shadow-none" : "shadow-lg"}" background="{yScroll<=0 ? "bg-none" : "bg-surface-100-800-token"}">
 	<svelte:fragment slot="lead">
         <a href="/" class="font-semibold text-xl px-4">
-            <svg class="w-10 text-token" viewBox="0 0 207 207" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-8 lg=:w-10 text-token" viewBox="0 0 207 170" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_2_2)">
                     <line x1="96" x2="96" y2="210" stroke="currentColor" stroke-width="24"/>
                     <line x1="1" y1="82" x2="104.005" y2="82" stroke="currentColor" stroke-width="24"/>

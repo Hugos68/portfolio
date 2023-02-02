@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ProjectCard from "$lib/components/ProjectCard.svelte";
-	import { fly } from "svelte/transition";
+	import { fade, fly } from "svelte/transition";
     import { cubicOut } from "svelte/easing";
     const projects = [   
         {
@@ -32,6 +32,11 @@
         }
     ];
 </script>
+
+<h1 class="mt-[5vh]">Projects</h1>
+<hr class="my-[2.5vh]">
+
+
 <div class="flex flex-wrap gap-12 px-6">
     {#each projects as project, i}
         <div class="flex-[25rem]" in:fly={{delay: 75 * i, y: 50, duration: 750, easing: cubicOut}}>

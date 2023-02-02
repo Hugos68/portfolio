@@ -4,11 +4,11 @@ html, body {
 }
 
 :root {
-    --header-height: 5.125rem;
+    --header-height: 5rem;
 }
 
-.page {
-    @apply px-4 pb-16 container mx-auto h-full min-h-[calc(100vh-var(--header-height))];
+.base-page-container {
+    @apply h-full min-h-[calc(100vh-var(--header-height))] container mx-auto px-4 pb-12;
 }
 
 .skills-devicon {

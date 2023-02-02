@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { AccordionGroup, AccordionItem, tooltip } from "@skeletonlabs/skeleton";
-	import { fly } from "svelte/transition";
+	import { fade, fly } from "svelte/transition";
     import { cubicOut } from "svelte/easing"
 
     let frontendOpened: boolean = false;
@@ -8,6 +8,21 @@
     let toolingOpened: boolean = false;
 
 </script>
+
+<h1 class="mt-[5vh]">Skills</h1>
+<hr class="my-[2.5vh]">
+
+<section class="bg-primary-500">
+    <h2>Frontend</h2>
+</section>
+
+<section class="bg-secondary-500">
+    <h2>Backend</h2>
+</section>
+
+<section class="bg-tertiary-500">
+    <h2>Tooling</h2>
+</section>
 
 
 <AccordionGroup spacing='space-y-12' padding="p-8" >
