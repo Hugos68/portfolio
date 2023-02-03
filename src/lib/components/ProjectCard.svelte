@@ -31,8 +31,13 @@
     } 
 </script>
 
-<div class="card w-full h-full aspect-video variant-glass-primary text-white">
-    <button class="p-0 m-0" on:click={openProjectModal}>
-        <img class="btn p-0 card z-[-1] translate-x-4 translate-y-4 shadow-xl hover:translate-y-0 duration-200 ease-in-out" src="{images[0]}" alt="{alt}">
+<div class="card aspect-video h-full w-full variant-glass-primary text-white group">
+    <button class="relative flex items-center justify-center" on:click={openProjectModal}>
+        <img class="card translate-x-4 translate-y-4 shadow-xl" src="{images[0]}" alt="{alt}">
+        <div class="card absolute top-4 left-4 w-full h-full bg-surface-400-500-token bg-opacity-75 scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+        <div class="absolute scale-0 group-hover:scale-100 transition-transform duration-300">
+            <h2 >{title}</h2>
+            <p>Click to view more about this project...</p>
+        </div>
     </button>
 </div>
