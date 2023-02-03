@@ -1,12 +1,16 @@
 <script lang="ts">
 	import { tooltip } from "@skeletonlabs/skeleton";
+	import { cubicOut } from "svelte/easing";
+	import { fly } from "svelte/transition";
 </script>
 
-<h1>Skills</h1>
-<hr class="my-[2.5vh]">
+<div class="ml-[12.5vw] w-fit">
+    <h1>Skills</h1>
+    <div class="ml-[1vw] my-[2.5vh] h-0.5 md:h-1 variant-filled-secondary"></div>
+</div>
 
-<div class="flex flex-col gap-[33vh] my-[20vh]">
-    <section class="flex justify-around flex-row-reverse items-start flex-wrap gap-12 transition-none card p-8">
+<div class="flex flex-col gap-[33vh] my-[10vh]">
+    <section class="flex justify-around flex-row-reverse items-start flex-wrap gap-12 transition-none card p-8" in:fly={{duration: 750, y: 250, easing: cubicOut}}>
         <div>
             <h2 class="unstyled text-[clamp(3rem,15vw,6rem)]">Frontend</h2>
             <p class="max-w-[50ch]">
@@ -24,7 +28,7 @@
   
     </section>
 
-    <section class="flex justify-around items-start flex-wrap gap-12 transition-none card p-8">
+    <section class="flex justify-around items-start flex-wrap gap-12 transition-none card p-8" in:fly={{duration: 750, y: 250, easing: cubicOut}}>
         <div>
             <h2 class="unstyled text-[clamp(3rem,15vw,6rem)]">Backend</h2>
             <p class="max-w-[50ch]">
@@ -40,11 +44,11 @@
         </div>
     </section>
 
-    <section class="flex justify-around flex-row-reverse items-start flex-wrap gap-12 transition-none card p-8">
+    <section class="flex justify-around flex-row-reverse items-start flex-wrap gap-12 transition-none card p-8" in:fly={{duration: 750, y: 250, easing: cubicOut}}>
         <div>
             <h2 class="unstyled text-[clamp(3rem,15vw,6rem)]">Tooling</h2>
             <p class="max-w-[50ch]">People often not mention it but using the <strong>right tools</strong> for the right job is very important to create and <strong>efficient</strong> workflow whilst making the developer experience enjoyable. That is why I enjoy <strong>teaching</strong> myself and others how to use certain tools.</p>
-        </div>
+        </div>  
         <div class="grid grid-cols-3 gap-[5vw]">
             <i class="devicon-git-plain colored skills-devicon" use:tooltip={{content: "Git"}}></i>
             <i class="devicon-docker-plain colored skills-devicon" use:tooltip={{content: "Docker"}}></i>

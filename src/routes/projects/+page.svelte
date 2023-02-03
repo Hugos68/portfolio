@@ -33,13 +33,15 @@
     ];
 </script>
 
-<h1>Projects</h1>
-<hr class="my-[2.5vh]">
+<div class="ml-[12.5vw] w-fit">
+    <h1>Projects</h1>
+    <div class="ml-[1vw] my-[2.5vh] h-0.5 md:h-1 variant-filled-secondary"></div>
+</div>
 
 
-<div class="flex flex-wrap gap-12 px-6">
+<div class="flex flex-wrap gap-12 px-6 my-[10vh]">
     {#each projects as project, i}
-        <div class="flex-[25rem]" in:fly={{delay: 75 * i, y: 50, duration: 750, easing: cubicOut}}>
+        <div class="flex-[33rem]" in:fly={{delay: 75 * i, y: 50, duration: 750, easing: cubicOut}}>
             <ProjectCard 
                 title={project.title}
                 description={project.description}
