@@ -12,7 +12,7 @@
 <div class="flex flex-col gap-[33vh] my-[10vh]">
     <section class="flex justify-around flex-row-reverse items-start flex-wrap gap-12 transition-none card p-8" in:fly={{duration: 750, y: 250, easing: cubicOut}}>
         <div>
-            <h2 class="unstyled text-[clamp(3rem,15vw,6rem)] variant-filled-primary text-center translate-y-[-50%] card shadow-lg">Frontend</h2>
+            <h2 class="unstyled text-[clamp(3rem,15vw,6rem)] variant-filled-primary text-center translate-y-[-50%] card shadow-lg" in:fly={{delay: 75, duration: 750, y: 50, easing: cubicOut}}>Frontend</h2>
             <p class="max-w-[50ch]">
                 Building frontend applications is where my digital heart lies when it comes to my preference, creating an <strong>elegant</strong> and <strong>accessible</strong> UI is something I strive for during every single one of my projects.
             </p>
@@ -30,7 +30,7 @@
 
     <section class="flex justify-around items-start flex-wrap gap-12 transition-none card p-8" in:fly={{duration: 750, y: 250, easing: cubicOut}}>
         <div>
-            <h2 class="unstyled text-[clamp(3rem,15vw,6rem)] variant-filled-secondary text-center translate-y-[-50%] card shadow-lg">Backend</h2>
+            <h2 class="unstyled text-[clamp(3rem,15vw,6rem)] variant-filled-secondary text-center translate-y-[-50%] card shadow-lg" in:fly={{delay: 75, duration: 750, y: 50, easing: cubicOut}}>Backend</h2>
             <p class="max-w-[50ch]">
                 Building backends is one of the most important aspects to any application. When I am building backend applications I ensure proper <strong>security</strong> along with <strong>fast</strong> and <strong>efficient</strong> solutions to logical problems.
             </p>
@@ -46,7 +46,7 @@
 
     <section class="flex justify-around flex-row-reverse items-start flex-wrap gap-12 transition-none card p-8" in:fly={{duration: 750, y: 250, easing: cubicOut}}>
         <div>
-            <h2 class="unstyled text-[clamp(3rem,15vw,6rem)] variant-filled-tertiary text-center translate-y-[-50%] card shadow-lg">Tooling</h2>
+            <h2 class="unstyled text-[clamp(3rem,15vw,6rem)] variant-filled-tertiary text-center translate-y-[-50%] card shadow-lg" in:fly={{delay: 75, duration: 750, y: 50, easing: cubicOut}}>Tooling</h2>
             <p class="max-w-[50ch]">People often not mention it but using the <strong>right tools</strong> for the right job is very important to create and <strong>efficient</strong> workflow whilst making the developer experience enjoyable. That is why I enjoy <strong>teaching</strong> myself and others how to use certain tools.</p>
         </div>  
         <div class="grid grid-cols-3 gap-[5vw]">
