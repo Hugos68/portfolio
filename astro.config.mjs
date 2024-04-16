@@ -29,11 +29,7 @@ export default defineConfig({
 				],
 			],
 			shikiConfig: {
-				themes: {
-					light: "github-light",
-					dark: "github-dark",
-				},
-				langs: [],
+				theme: "github-dark-dimmed",
 				wrap: true,
 			},
 		}),
