@@ -3,6 +3,7 @@ import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
 import TableOfContents from "../../../components/TableOfContents.astro";
+import { formatDate } from "../../../utils";
 
 export const getStaticPaths = (async () => {
 	const entries = await getCollection("blog");
@@ -19,21 +20,6 @@ export const getStaticPaths = (async () => {
 const { entry } = Astro.props;
 
 const { Content, headings } = await entry.render();
-
-function formatDate(date: Date) {
-	const currentYear = new Date().getFullYear();
-	if (date.getFullYear() === currentYear) {
-		return date.toLocaleDateString(undefined, {
-			month: "short",
-			day: "numeric",
-		});
-	}
-	return date.toLocaleDateString(undefined, {
-		year: "numeric",
-		month: "short",
-		day: "numeric",
-	});
-}
 ---
 
 <Layout tags={entry.data.tags} image={entry.data.image}>
