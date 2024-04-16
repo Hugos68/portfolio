@@ -42,7 +42,17 @@ function formatDate(date: Date) {
 			class="w-full prose prose-neutral dark:prose-invert prose-headings:scroll-mt-24 prose-img:rounded-md"
 		>
 			<h1>{entry.data.title}</h1>
-			{entry.data.image && <img class="mb-2" src={entry.data.image} alt={entry.data.title} />}
+			{
+				entry.data.image && (
+					<img
+						class="mb-2"
+						src={entry.data.image}
+						alt={entry.data.title}
+						width="1280"
+						height="720"
+					/>
+				)
+			}
 			<div class="flex justify-between not-prose font-semibold">
 				{
 					entry.data.tags && (
