@@ -1,0 +1,38 @@
+---
+import type { MarkdownHeading } from "astro";
+
+interface Props {
+	headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+
+function depthToMarginClass(depth: number) {
+	switch (depth) {
+		case 1:
+			return "pl-0";
+		case 2:
+			return "pl-4";
+		case 3:
+			return "pl-8";
+		case 4:
+			return "pl-12";
+		case 5:
+			return "pl-16";
+		case 6:
+			return "pl-20";
+		default:
+			return "pl-0";
+	}
+}
+---
+
+<ul>
+	{
+		headings.map((heading) => (
+			<li class={depthToMarginClass(heading.depth)}>
+				<a href={`#${heading.slug}`}>{heading.text}</a>
+			</li>
+		))
+	}
+</ul>

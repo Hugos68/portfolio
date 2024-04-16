@@ -22,16 +22,18 @@ const { title, description, tags } = Astro.props;
 	</head>
 
 	<body class="bg-stone-50 dark:bg-stone-950 text-stone-950 dark:text-stone-50">
-		<header class="p-4 max-w-6xl mx-auto">
-			<nav class="flex gap-2 items-center">
+		<header
+			class="sticky top-0 h-20 px-4 flex items-center justify-center bg-stone-100 dark:bg-stone-900"
+		>
+			<nav class="max-w-7xl flex gap-2 items-center flex-1">
 				<a class="px-3 py-1.5 text-lg font-semibold" href="/">Hugo Korte</a>
 				<a class="px-3 py-1.5 ml-auto" href="/blog">Blog</a>
 				<a class="px-3 py-1.5" href="/work">Work</a>
 			</nav>
 		</header>
-		<main class="p-4 max-w-6xl mx-auto">
+		<main class="p-4 max-w-7xl mx-auto">
 			<slot />
 		</main>
-		<footer class="px-4 py-16 max-w-6xl mx-auto"></footer>
+		<footer class="px-4 py-16 max-w-7xl mx-auto"></footer>
 	</body>
 </html>

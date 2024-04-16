@@ -2,6 +2,8 @@
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
+import TableOfContents from "./TableOfContents.astro";
+
 export const getStaticPaths = (async () => {
 	const entries = await getCollection("blog");
 	return entries.map((entry) => ({
@@ -16,14 +18,29 @@ export const getStaticPaths = (async () => {
 
 const { entry } = Astro.props;
 
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
 ---
 
 <Layout title={entry.data.title} description={entry.data.description} tags={entry.data.tags}>
-	<article class="prose prose-neutral dark:prose-invert mx-auto">
-		<h1>{entry.data.title}</h1>
-		<p>{entry.data.description}</p>
-		{entry.data.tags.length > 0 && entry.data.tags.forEach((tag) => <span>{tag}</span>)}
-		<Content />
-	</article>
+	<div class="flex justify-center lg:justify-between gap-2 py-16">
+		<article class="w-full prose prose-neutral dark:prose-invert prose-headings:scroll-mt-24">
+			<h1>{entry.data.title}</h1>
+			<p>{entry.data.description}</p>
+			{entry.data.tags.length > 0 && entry.data.tags.forEach((tag) => <span>{tag}</span>)}
+			<p>Published at: {new Date(entry.data.publishedAt).toLocaleDateString()}</p>
+			<nav
+				class="lg:hidden flex-shrink"
+			>
+				<h2>Table of Contents</h2>
+				<TableOfContents headings={headings} />
+			</nav>
+			<Content />
+		</article>
+		<nav
+			class="hidden lg:block flex-shrink prose prose-neutral dark:prose-invert sticky top-24 h-full"
+		>
+			<h2>Table of Contents</h2>
+			<TableOfContents headings={headings} />
+		</nav>
+	</div>
 </Layout>
