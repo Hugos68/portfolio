@@ -1,6 +1,4 @@
 ---
-import "@fontsource/geist-mono";
-
 interface Props {
 	title: string;
 	description?: string;
@@ -22,12 +20,18 @@ const { title, description, tags } = Astro.props;
 		{description && <meta name="description" content={description} />}
 		{tags && <meta name="keywords" content={tags.join(", ")} />}
 	</head>
+
 	<body class="bg-stone-50 dark:bg-stone-950 text-stone-950 dark:text-stone-50">
-		<slot />
+		<header class="p-4 max-w-6xl mx-auto">
+			<nav class="flex gap-2 items-center">
+				<a class="px-3 py-1.5 text-lg font-semibold" href="/">Hugo Korte</a>
+				<a class="px-3 py-1.5 ml-auto" href="/blog">Blog</a>
+				<a class="px-3 py-1.5" href="/work">Work</a>
+			</nav>
+		</header>
+		<main class="p-4 max-w-6xl mx-auto">
+			<slot />
+		</main>
+		<footer class="px-4 py-16 max-w-6xl mx-auto"></footer>
 	</body>
-	<style>
-		body {
-			font-family: "Geist Mono", monospace;
-		}
-	</style>
 </html>
