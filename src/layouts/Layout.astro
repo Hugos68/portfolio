@@ -15,7 +15,12 @@ function pathnameToTitle(pathname: string) {
 		.replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
-const { title = pathnameToTitle(Astro.url.pathname), description, tags, image } = Astro.props;
+const {
+	title = pathnameToTitle(Astro.url.pathname),
+	description = "Portfolio of Hugo Korte. Developer that does everything web.",
+	tags,
+	image,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -27,7 +32,7 @@ const { title = pathnameToTitle(Astro.url.pathname), description, tags, image } 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		{description && <meta name="description" content={description} />}
+		<meta name="description" content={description} />
 		{tags && <meta name="keywords" content={tags.join(", ")} />}
 		{image && <meta property="og:image" content={image} />}
 	</head>
