@@ -20,6 +20,7 @@ const { title, description, tags, image } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		<meta name="color-scheme" content="dark light" />
 		{tags && <meta name="keywords" content={tags.join(", ")} />}
 		{image && <meta property="og:image" content={image} />}
 	</head>
