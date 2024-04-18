@@ -6,21 +6,7 @@ interface Props {
 	image?: string | undefined;
 }
 
-function pathnameToTitle(pathname: string) {
-	return pathname
-		.split("/")
-		.filter(Boolean)
-		.at(-1)
-		?.replace(/-/g, " ")
-		.replace(/\b\w/g, (char) => char.toUpperCase());
-}
-
-const {
-	title = pathnameToTitle(Astro.url.pathname),
-	description = "Portfolio of Hugo Korte. Developer that does everything web.",
-	tags,
-	image,
-} = Astro.props;
+const { title, description, tags, image } = Astro.props;
 ---
 
 <!doctype html>
