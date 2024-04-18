@@ -6,33 +6,39 @@ import { formatDate } from "../../utils";
 const blogEntries = await getCollection("blog");
 ---
 
-<Layout title="Blog">
-	<h1 class="text-4xl font-bold">Blog</h1>
-	<nav class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+<Layout
+	title="Blog"
+	description="Here are all the blogs I've written. Including, but not limited to, helpful guides, random rants and more random bullshittery."
+>
+	<nav class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 		{
 			blogEntries.map((entry) => (
 				<div>
-					<a href={`/blog/${entry.slug}`}>
-						<h2 class="text-2xl font-semibold">{entry.data.title}</h2>
-						<div class="flex justify-between  font-semibold">
-							{entry.data.tags && (
-								<div class="flex gap-2 text-lg ">
-									{entry.data.tags.map((tag) => (
-										<a href={`/blogs/categories/${tag}`}>#{tag}</a>
-									))}
-								</div>
+					<a class="flex flex-col gap-4" href={`/blog/${entry.slug}`}>
+						<h2 class="text-2xl font-semibold line-clamp-2 min-h-16">
+							{entry.data.title}
+						</h2>
+						<div>
+							<div class="flex justify-between  font-semibold">
+								{entry.data.tags && (
+									<div class="flex gap-2">
+										{entry.data.tags.map((tag) => (
+											<span>#{tag}</span>
+										))}
+									</div>
+								)}
+								<p>Posted on: {formatDate(entry.data.publishedAt)}</p>
+							</div>
+							{entry.data.image && (
+								<img
+									class="rounded-md mb-2"
+									width="1280"
+									height="720"
+									src={entry.data.image}
+									alt={entry.data.title}
+								/>
 							)}
-							<p>Posted on: {formatDate(entry.data.publishedAt)}</p>
 						</div>
-						{entry.data.image && (
-							<img
-								class="rounded-md mb-2"
-								width="1280"
-								height="720"
-								src={entry.data.image}
-								alt={entry.data.title}
-							/>
-						)}
 					</a>
 				</div>
 			))

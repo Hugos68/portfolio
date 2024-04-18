@@ -1,5 +1,6 @@
 ---
 title: Pagefind with Vite
+description: How to use Pagefind with Vite and overcoming the issues it creates.
 tags: ["pagefind", "vite"]
 publishedAt: 2024-02-05
 editedAt: 2024-04-16
@@ -25,8 +26,8 @@ Unlike [Algolia](https://www.algolia.com/), [Elastic](https://www.elastic.co/) o
 
 Here are some examples of large scale websites that have been indexed by Pagefind:
 
-- [MDN Web Docs](https://mdn.pagefind.app/)
-- [Godot Docs](https://godot.pagefind.app/)
+-   [MDN Web Docs](https://mdn.pagefind.app/)
+-   [Godot Docs](https://godot.pagefind.app/)
 
 ## So, what's the problem?
 
@@ -44,7 +45,7 @@ An awesome native ESM feature is the [dynamic import](https://developer.mozilla.
 Dynamically importing pagefind looks like this:
 
 ```ts
-const pagefind = await import('/pagefind/pagefind.js');
+const pagefind = await import("/pagefind/pagefind.js");
 ```
 
 Vite, however, tries to scan for the `/pagefind/pagefind.js` file during build and cannot find it (because it doesn't exist yet), this produces the following error:
@@ -60,15 +61,15 @@ Luckily [Rollup](https://rollupjs.org/), the bundler behind Vite, has thought of
 This means we can solve the first problem by marking the module as "external" like so inside your `vite.config.[ts|js]`:
 
 ```ts
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
 export default defineConfig({
 	// ...
 	build: {
 		rollupOptions: {
-			external: ['/pagefind/pagefind.js']
-		}
-	}
+			external: ["/pagefind/pagefind.js"],
+		},
+	},
 });
 ```
 
@@ -112,16 +113,16 @@ The `assetInclude` option does two specific things, one of them is quote:
 This means that we can actually tell Vite to allow importing pagefind from the static folder by once again editing your `vite.config.[ts|js]` like so:
 
 ```ts
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
 export default defineConfig({
 	// ...
 	build: {
 		rollupOptions: {
-			external: ['/pagefind/pagefind.js']
-		}
+			external: ["/pagefind/pagefind.js"],
+		},
 	},
-	assetsInclude: '**/pagefind.js'
+	assetsInclude: "**/pagefind.js",
 });
 ```
 

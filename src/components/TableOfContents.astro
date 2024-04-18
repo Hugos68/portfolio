@@ -27,12 +27,14 @@ function depthToMarginClass(depth: number) {
 }
 ---
 
-<ul>
-	{
-		headings.map((heading) => (
-			<li class={depthToMarginClass(heading.depth)}>
-				<a href={`#${heading.slug}`}>{heading.text}</a>
-			</li>
-		))
-	}
-</ul>
+<nav>
+	<ul>
+		{
+			headings.map((heading) => (
+				<li class={depthToMarginClass(heading.depth)}>
+					<a href={`#${heading.slug}`}>{heading.text}</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>

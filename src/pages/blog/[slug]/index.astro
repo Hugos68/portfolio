@@ -22,16 +22,32 @@ const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 ---
 
-<Layout tags={entry.data.tags} image={entry.data.image}>
+<Layout
+	title={entry.data.title}
+	description={entry.data.description}
+	tags={entry.data.tags}
+	image={entry.data.image}
+>
 	<div class="flex justify-center lg:justify-between gap-2">
-		<article
+		<div
 			class="w-full prose prose-neutral dark:prose-invert prose-headings:scroll-mt-24 prose-img:rounded-md"
 		>
-			<h1>{entry.data.title}</h1>
+			<div class="flex justify-between not-prose font-semibold">
+				{
+					entry.data.tags && (
+						<div class="flex gap-2 text-lg ">
+							{entry.data.tags.map((tag) => (
+								<span>#{tag}</span>
+							))}
+						</div>
+					)
+				}
+				<p>Posted on: {formatDate(entry.data.publishedAt)}</p>
+			</div>
 			{
 				entry.data.image && (
 					<img
-						class="mb-2"
+						class="m-0"
 						src={entry.data.image}
 						alt={entry.data.title}
 						width="1280"
@@ -39,18 +55,7 @@ const { Content, headings } = await entry.render();
 					/>
 				)
 			}
-			<div class="flex justify-between not-prose font-semibold">
-				{
-					entry.data.tags && (
-						<div class="flex gap-2 text-lg ">
-							{entry.data.tags.map((tag) => (
-								<a href={`/blogs/categories/${tag}`}>#{tag}</a>
-							))}
-						</div>
-					)
-				}
-				<p>Posted on: {formatDate(entry.data.publishedAt)}</p>
-			</div>
+
 			<nav class="lg:hidden flex-shrink">
 				<h2>Table of Contents</h2>
 				<TableOfContents headings={headings} />
@@ -59,13 +64,13 @@ const { Content, headings } = await entry.render();
 			<p class="italic mt-8">
 				Last edited at: {formatDate(entry.data.editedAt)}
 			</p>
-		</article>
-		<nav
+		</div>
+		<aside
 			class="hidden lg:block flex-shrink prose prose-neutral dark:prose-invert sticky top-24 h-full"
 		>
 			<h2>Table of Contents</h2>
 			<TableOfContents headings={headings} />
-		</nav>
+		</aside>
 	</div>
 </Layout>
 

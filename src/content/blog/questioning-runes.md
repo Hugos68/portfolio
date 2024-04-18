@@ -1,5 +1,6 @@
 ---
 title: "Questioning Runes: My Concerns with Svelte 5."
+description: Discussing my thoughts on Runes and why I think there are some serious unaddressed issues.
 tags: ["svelte", "runes"]
 publishedAt: 2024-04-17
 editedAt: 2024-04-17
