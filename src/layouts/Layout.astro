@@ -1,28 +1,33 @@
 ---
+import { SEOMetadata } from "astro-seo-metadata";
+
 interface Props {
 	title?: string;
 	description?: string;
-	tags?: string[];
 	image?: string | undefined;
 }
 
-const { title, description, tags, image } = Astro.props;
+const { title, description, image } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<meta name="color-scheme" content="dark light" />
-		{tags && <meta name="keywords" content={tags.join(", ")} />}
-		{image && <meta property="og:image" content={image} />}
+		<SEOMetadata
+			siteName={"Hugo Korte"}
+			title={title}
+			description={description}
+			image={image}
+			favicon={"/favicon.svg"}
+			author="Hugo Korte"
+			copyright="MIT"
+			astroSitemap={true}
+			canonicalUrl={Astro.url.toString()}
+			type={"website"}
+			astroGenerator={true}
+		/>
 	</head>
 
 	<body class="text-stone-950 dark:text-stone-50">
