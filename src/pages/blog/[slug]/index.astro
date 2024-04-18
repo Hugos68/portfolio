@@ -28,14 +28,25 @@ const { Content, headings } = await entry.render();
 	tags={entry.data.tags}
 	image={entry.data.image}
 >
-	<div class="flex justify-center lg:justify-between gap-2">
+	<div class="flex justify-between gap-8">
 		<div
-			class="w-full prose prose-neutral dark:prose-invert prose-headings:scroll-mt-24 prose-img:rounded-md"
+			class="w-full prose prose-stone dark:prose-invert prose-headings:scroll-mt-24 prose-img:rounded-md"
 		>
-			<div class="flex justify-between not-prose font-semibold">
+			{
+				entry.data.image && (
+					<img
+						class="mb-4"
+						src={entry.data.image}
+						alt={entry.data.title}
+						width="1280"
+						height="720"
+					/>
+				)
+			}
+			<div class="flex justify-between not-prose font-semibold mb-16">
 				{
 					entry.data.tags && (
-						<div class="flex gap-2 text-lg ">
+						<div class="flex gap-2 text-lg">
 							{entry.data.tags.map((tag) => (
 								<span>#{tag}</span>
 							))}
@@ -44,29 +55,18 @@ const { Content, headings } = await entry.render();
 				}
 				<p>Posted on: {formatDate(entry.data.publishedAt)}</p>
 			</div>
-			{
-				entry.data.image && (
-					<img
-						class="m-0"
-						src={entry.data.image}
-						alt={entry.data.title}
-						width="1280"
-						height="720"
-					/>
-				)
-			}
-
-			<nav class="lg:hidden flex-shrink">
-				<h2>Table of Contents</h2>
+			<div class="xl:hidden bg-stone-200 dark:bg-stone-900 p-4 rounded-md">
+				<h2 class="mt-0">Table of Contents</h2>
 				<TableOfContents headings={headings} />
-			</nav>
+			</div>
+
 			<Content />
 			<p class="italic mt-8">
 				Last edited at: {formatDate(entry.data.editedAt)}
 			</p>
 		</div>
 		<aside
-			class="hidden lg:block flex-shrink prose prose-neutral dark:prose-invert sticky top-24 h-full"
+			class="hidden xl:block prose prose-stone dark:prose-invert sticky top-24 h-full bg-stone-200 dark:bg-stone-900 p-4 rounded-md"
 		>
 			<h2>Table of Contents</h2>
 			<TableOfContents headings={headings} />
