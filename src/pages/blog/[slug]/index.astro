@@ -28,7 +28,11 @@ const { Content, headings } = await entry.render();
 	tags={entry.data.tags}
 	image={entry.data.image}
 >
-	<div class="flex justify-between gap-8">
+	<header class="prose prose-stone dark:prose-invert max-w-[65ch] w-full mx-auto xl:mx-0" slot="header">
+		<h1>{entry.data.title}</h1>
+		<p>{entry.data.description}</p>
+	</header>
+	<div class="flex justify-center xl:justify-between gap-8">
 		<div
 			class="w-full prose prose-stone dark:prose-invert prose-headings:scroll-mt-24 prose-img:rounded-md"
 		>
