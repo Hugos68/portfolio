@@ -5,8 +5,11 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypeSlug from "rehype-slug";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
+	site: process.env.CF_PAGES_URL,
 	integrations: [
 		mdx({
 			rehypePlugins: [
@@ -34,5 +37,6 @@ export default defineConfig({
 			},
 		}),
 		tailwind(),
+		sitemap(),
 	],
 });
