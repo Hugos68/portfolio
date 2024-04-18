@@ -31,8 +31,8 @@ export default defineConfig({
 		],
 		shikiConfig: {
 			themes: {
-				dark: "vitesse-dark",
-				light: "vitesse-light",
+				dark: "slack-dark",
+				light: "slack-ochin",
 			},
 			wrap: true,
 		},
