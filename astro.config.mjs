@@ -30,12 +30,17 @@ export default defineConfig({
 					},
 				],
 			],
-			shikiConfig: {
-				theme: "github-dark-dimmed",
-				wrap: true,
-			},
 		}),
 		tailwind(),
 		sitemap(),
 	],
+	markdown: {
+		shikiConfig: {
+			themes: {
+				dark: 'vitesse-dark',
+				light: "vitesse-light",
+			},
+			wrap: true,
+		},
+	},
 });
