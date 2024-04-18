@@ -1,15 +1,14 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
-import tailwind from "@astrojs/tailwind";
+import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeExternalLinks from "rehype-external-links";
-import rehypeSlug from "rehype-slug";
-
+import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-	site: process.env.SITE,
+	site: process.env.CF_PAGES_URL,
 	integrations: [
 		mdx({
 			rehypePlugins: [
