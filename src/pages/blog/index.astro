@@ -19,6 +19,7 @@ const blogEntries = await getCollection("blog");
 							<h2 class="text-2xl font-semibold line-clamp-2 min-h-16 group-hover:underline text-balance">
 								{entry.data.title}
 							</h2>
+							<p class="min-h-12 line-clamp-2">{entry.data.description}</p>
 							<div>
 								{entry.data.image && (
 									<img

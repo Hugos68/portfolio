@@ -28,7 +28,10 @@ const { Content, headings } = await entry.render();
 	tags={entry.data.tags}
 	image={entry.data.image}
 >
-	<header class="prose prose-stone dark:prose-invert max-w-[65ch] w-full mx-auto xl:mx-0" slot="header">
+	<header
+		class="prose prose-stone dark:prose-invert max-w-[65ch] w-full mx-auto xl:mx-0"
+		slot="header"
+	>
 		<h1>{entry.data.title}</h1>
 		<p>{entry.data.description}</p>
 	</header>
